@@ -1,0 +1,28 @@
+# MF2K NAME file
+#
+# Output Files
+GLOBAL        701 "molok_GW_flow_model_ZeroPumping.glo"
+LIST          702 "molok_GW_flow_model_ZeroPumping.out"
+DATA(BINARY)  730 "molok_GW_flow_model_ZeroPumping.hed"
+DATA(BINARY)  740 "molok_GW_flow_model_ZeroPumping.ccf"
+LMT6          718 "molok_GW_flow_model_ZeroPumping.lmt"
+#
+# Obs-Sen-Pes Process Input Files
+OBS           750 "molok_GW_flow_model_ZeroPumping.obs"
+HOB           751 "molok_GW_flow_model_ZeroPumping.hob"
+DROB          754 "molok_GW_flow_model_ZeroPumping.drob"
+CHOB          755 "molok_GW_flow_model_ZeroPumping.chob"
+#
+# Global Input Files
+DIS           719 "molok_GW_flow_model_ZeroPumping.dis"
+#
+# Flow Process Input Files
+BAS6          703 "molok_GW_flow_model_ZeroPumping.ba6"
+LPF           704 "molok_GW_flow_model_ZeroPumping.lpf"
+OC            715 "molok_GW_flow_model_ZeroPumping.oc"
+RCH           716 "molok_GW_flow_model_ZeroPumping.rch"
+HFB6          707 "molok_GW_flow_model_ZeroPumping.hfb"
+WEL           709 "molok_GW_flow_model_ZeroPumping.wel"
+DRN           710 "molok_GW_flow_model_ZeroPumping.drn"
+CHD           713 "molok_GW_flow_model_ZeroPumping.chd"
+PCG           714 "molok_GW_flow_model_ZeroPumping.pcg"

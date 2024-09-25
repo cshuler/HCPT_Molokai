@@ -1,0 +1,15 @@
+740 -888.0 0 0
+1 1 1 
+0 0 0 
+-1.0 -1.0 -1.0 
+0 0 0 
+0 0 0 
+HDF5 1.0 -1 "molok_GW_flow_model_Adding_Osds.h5" "Arrays/HK1" 1 0 61992
+HDF5 1.0 -1 "molok_GW_flow_model_Adding_Osds.h5" "Arrays/HANI1" 1 0 61992
+HDF5 1.0 -1 "molok_GW_flow_model_Adding_Osds.h5" "Arrays/VK1" 1 0 61992
+HDF5 1.0 -1 "molok_GW_flow_model_Adding_Osds.h5" "Arrays/HK2" 1 0 61992
+HDF5 1.0 -1 "molok_GW_flow_model_Adding_Osds.h5" "Arrays/HANI2" 1 0 61992
+HDF5 1.0 -1 "molok_GW_flow_model_Adding_Osds.h5" "Arrays/VK2" 1 0 61992
+HDF5 1.0 -1 "molok_GW_flow_model_Adding_Osds.h5" "Arrays/HK3" 1 0 61992
+HDF5 1.0 -1 "molok_GW_flow_model_Adding_Osds.h5" "Arrays/HANI3" 1 0 61992
+HDF5 1.0 -1 "molok_GW_flow_model_Adding_Osds.h5" "Arrays/VK3" 1 0 61992

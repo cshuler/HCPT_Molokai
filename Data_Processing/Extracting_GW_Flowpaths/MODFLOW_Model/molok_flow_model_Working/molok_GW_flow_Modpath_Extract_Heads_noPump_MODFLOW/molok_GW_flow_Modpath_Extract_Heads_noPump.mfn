@@ -1,0 +1,28 @@
+# MF2K NAME file
+#
+# Output Files
+GLOBAL        701 "molok_GW_flow_Modpath_Extract_Heads_noPump.glo"
+LIST          702 "molok_GW_flow_Modpath_Extract_Heads_noPump.out"
+DATA(BINARY)  730 "molok_GW_flow_Modpath_Extract_Heads_noPump.hed"
+DATA(BINARY)  740 "molok_GW_flow_Modpath_Extract_Heads_noPump.ccf"
+LMT6          718 "molok_GW_flow_Modpath_Extract_Heads_noPump.lmt"
+#
+# Obs-Sen-Pes Process Input Files
+OBS           750 "molok_GW_flow_Modpath_Extract_Heads_noPump.obs"
+HOB           751 "molok_GW_flow_Modpath_Extract_Heads_noPump.hob"
+DROB          754 "molok_GW_flow_Modpath_Extract_Heads_noPump.drob"
+CHOB          755 "molok_GW_flow_Modpath_Extract_Heads_noPump.chob"
+#
+# Global Input Files
+DIS           719 "molok_GW_flow_Modpath_Extract_Heads_noPump.dis"
+#
+# Flow Process Input Files
+BAS6          703 "molok_GW_flow_Modpath_Extract_Heads_noPump.ba6"
+LPF           704 "molok_GW_flow_Modpath_Extract_Heads_noPump.lpf"
+OC            715 "molok_GW_flow_Modpath_Extract_Heads_noPump.oc"
+RCH           716 "molok_GW_flow_Modpath_Extract_Heads_noPump.rch"
+HFB6          707 "molok_GW_flow_Modpath_Extract_Heads_noPump.hfb"
+WEL           709 "molok_GW_flow_Modpath_Extract_Heads_noPump.wel"
+DRN           710 "molok_GW_flow_Modpath_Extract_Heads_noPump.drn"
+CHD           713 "molok_GW_flow_Modpath_Extract_Heads_noPump.chd"
+PCG           714 "molok_GW_flow_Modpath_Extract_Heads_noPump.pcg"

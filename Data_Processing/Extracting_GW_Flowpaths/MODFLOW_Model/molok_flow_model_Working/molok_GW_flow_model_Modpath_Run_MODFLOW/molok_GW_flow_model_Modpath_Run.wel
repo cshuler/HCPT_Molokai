@@ -1,0 +1,4 @@
+#GMS_HDF5_01
+61 740 AUX IFACE AUX QFACT AUX CELLGRP
+        61         0         0
+GMS_HDF5_01 "molok_GW_flow_model_Modpath_Run.h5" "Well" 1

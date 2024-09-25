@@ -1,0 +1,28 @@
+# MF2K NAME file
+#
+# Output Files
+GLOBAL        701 "molok_GW_flow_model_Adding_Osds.glo"
+LIST          702 "molok_GW_flow_model_Adding_Osds.out"
+DATA(BINARY)  730 "molok_GW_flow_model_Adding_Osds.hed"
+DATA(BINARY)  740 "molok_GW_flow_model_Adding_Osds.ccf"
+LMT6          718 "molok_GW_flow_model_Adding_Osds.lmt"
+#
+# Obs-Sen-Pes Process Input Files
+OBS           750 "molok_GW_flow_model_Adding_Osds.obs"
+HOB           751 "molok_GW_flow_model_Adding_Osds.hob"
+DROB          754 "molok_GW_flow_model_Adding_Osds.drob"
+CHOB          755 "molok_GW_flow_model_Adding_Osds.chob"
+#
+# Global Input Files
+DIS           719 "molok_GW_flow_model_Adding_Osds.dis"
+#
+# Flow Process Input Files
+BAS6          703 "molok_GW_flow_model_Adding_Osds.ba6"
+LPF           704 "molok_GW_flow_model_Adding_Osds.lpf"
+OC            715 "molok_GW_flow_model_Adding_Osds.oc"
+RCH           716 "molok_GW_flow_model_Adding_Osds.rch"
+HFB6          707 "molok_GW_flow_model_Adding_Osds.hfb"
+WEL           709 "molok_GW_flow_model_Adding_Osds.wel"
+DRN           710 "molok_GW_flow_model_Adding_Osds.drn"
+CHD           713 "molok_GW_flow_model_Adding_Osds.chd"
+PCG           714 "molok_GW_flow_model_Adding_Osds.pcg"

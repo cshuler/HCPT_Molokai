@@ -1,0 +1,10 @@
+#GMS MODFLOW Simulation
+#10 May 2011
+FREE
+HDF5 1.0 -1 "molok_GW_flow_model_Adding_Osds.h5" "Arrays/ibound1" 1 0 61992
+HDF5 1.0 -1 "molok_GW_flow_model_Adding_Osds.h5" "Arrays/ibound2" 1 0 61992
+HDF5 1.0 -1 "molok_GW_flow_model_Adding_Osds.h5" "Arrays/ibound3" 1 0 61992
+-999.0
+HDF5 1.0 -1 "molok_GW_flow_model_Adding_Osds.h5" "Arrays/StartHead1" 1 0 61992
+HDF5 1.0 -1 "molok_GW_flow_model_Adding_Osds.h5" "Arrays/StartHead2" 1 0 61992
+HDF5 1.0 -1 "molok_GW_flow_model_Adding_Osds.h5" "Arrays/StartHead3" 1 0 61992

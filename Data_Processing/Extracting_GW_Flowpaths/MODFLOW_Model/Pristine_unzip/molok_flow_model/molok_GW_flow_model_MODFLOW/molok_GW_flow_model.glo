@@ -1,0 +1,4543 @@
+                                  MODFLOW-2000
+      U.S. GEOLOGICAL SURVEY MODULAR FINITE-DIFFERENCE GROUND-WATER FLOW MODEL
+                           VERSION 1.19.01 03/25/2010
+
+
+ This model run produced both GLOBAL and LIST files.  This is the GLOBAL file.
+
+ GLOBAL LISTING FILE: "molok_GW_flow_model.glo"
+                         UNIT  701
+
+ OPENING "molok_GW_flow_model.out"
+ FILE TYPE:LIST   UNIT  702   STATUS:REPLACE
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING "molok_GW_flow_model.hed"
+ FILE TYPE:DATA(BINARY)   UNIT  730   STATUS:UNKNOWN
+ FORMAT:BINARY                 ACCESS:SEQUENTIAL          
+
+ OPENING "molok_GW_flow_model.ccf"
+ FILE TYPE:DATA(BINARY)   UNIT  740   STATUS:UNKNOWN
+ FORMAT:BINARY                 ACCESS:SEQUENTIAL          
+
+ OPENING "molok_GW_flow_model.lmt"
+ FILE TYPE:LMT6   UNIT  718   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+#                                                                                                                                                                                                       
+# Obs-Sen-Pes Process Input Files                                                                                                                                                                       
+
+ OPENING "molok_GW_flow_model.obs"
+ FILE TYPE:OBS   UNIT  750   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING "molok_GW_flow_model.hob"
+ FILE TYPE:HOB   UNIT  751   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING "molok_GW_flow_model.drob"
+ FILE TYPE:DROB   UNIT  754   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING "molok_GW_flow_model.chob"
+ FILE TYPE:CHOB   UNIT  755   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+#                                                                                                                                                                                                       
+# Global Input Files                                                                                                                                                                                    
+
+ OPENING "molok_GW_flow_model.dis"
+ FILE TYPE:DIS   UNIT  719   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+#                                                                                                                                                                                                       
+# Flow Process Input Files                                                                                                                                                                              
+
+ OPENING "molok_GW_flow_model.ba6"
+ FILE TYPE:BAS6   UNIT  703   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING "molok_GW_flow_model.lpf"
+ FILE TYPE:LPF   UNIT  704   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING "molok_GW_flow_model.oc"
+ FILE TYPE:OC   UNIT  715   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING "molok_GW_flow_model.rch"
+ FILE TYPE:RCH   UNIT  716   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING "molok_GW_flow_model.hfb"
+ FILE TYPE:HFB6   UNIT  707   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING "molok_GW_flow_model.wel"
+ FILE TYPE:WEL   UNIT  709   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING "molok_GW_flow_model.drn"
+ FILE TYPE:DRN   UNIT  710   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING "molok_GW_flow_model.chd"
+ FILE TYPE:CHD   UNIT  713   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING "molok_GW_flow_model.pcg"
+ FILE TYPE:PCG   UNIT  714   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ THE FREE FORMAT OPTION HAS BEEN SELECTED
+
+ DISCRETIZATION INPUT DATA READ FROM UNIT  719
+ # MF2K DISCRETIZATION FILE
+ #
+ #
+ # NLAY NROW NCOL NPER TIMEUNITS LENUNITS
+    3 LAYERS       168 ROWS       369 COLUMNS
+    1 STRESS PERIOD(S) IN SIMULATION
+ MODEL TIME UNIT IS DAYS
+ MODEL LENGTH UNIT IS METERS
+ THE GROUND-WATER TRANSPORT PROCESS IS INACTIVE
+
+ THE OBSERVATION PROCESS IS ACTIVE
+ THE SENSITIVITY PROCESS IS INACTIVE
+ THE PARAMETER-ESTIMATION PROCESS IS INACTIVE
+
+ MODE: FORWARD WITH OBSERVATIONS
+
+  Confining bed flag for each layer:
+   0   0   0
+
+    1674321  ELEMENTS OF GX ARRAY USED OUT OF    1674321
+     185976  ELEMENTS OF GZ ARRAY USED OUT OF     185976
+     185976  ELEMENTS OF IG ARRAY USED OUT OF     185976
+
+
+
+                               DELR
+ READING ON UNIT  719 WITH FORMAT: (FREE)              
+
+
+
+                               DELC
+ READING ON UNIT  719 WITH FORMAT: (FREE)              
+
+
+ STRESS PERIOD     LENGTH       TIME STEPS     MULTIPLIER FOR DELT    SS FLAG
+ ----------------------------------------------------------------------------
+        1         1.000000          1                    1.000         SS
+
+ STEADY-STATE SIMULATION
+
+
+
+
+ LPF1 -- LAYER PROPERTY FLOW PACKAGE, VERSION 1, 1/11/2000
+         INPUT READ FROM UNIT  704
+ CELL-BY-CELL FLOWS WILL BE SAVED ON UNIT  740
+ HEAD AT CELLS THAT CONVERT TO DRY=  -888.00    
+ No named parameters
+
+   LAYER FLAGS:
+ LAYER       LAYTYP        LAYAVG         CHANI        LAYVKA        LAYWET
+ ---------------------------------------------------------------------------
+    1             1             0    -1.000E+00             0             0
+    2             1             0    -1.000E+00             0             0
+    3             1             0    -1.000E+00             0             0
+
+   INTERPRETATION OF LAYER FLAGS:
+                        INTERBLOCK     HORIZONTAL    DATA IN
+         LAYER TYPE   TRANSMISSIVITY   ANISOTROPY   ARRAY VKA   WETTABILITY
+ LAYER      (LAYTYP)      (LAYAVG)       (CHANI)      (LAYVKA)      (LAYWET)
+ ---------------------------------------------------------------------------
+    1   CONVERTIBLE      HARMONIC      VARIABLE    VERTICAL K  NON-WETTABLE
+    2   CONVERTIBLE      HARMONIC      VARIABLE    VERTICAL K  NON-WETTABLE
+    3   CONVERTIBLE      HARMONIC      VARIABLE    VERTICAL K  NON-WETTABLE
+
+     557928 ELEMENTS IN X ARRAY ARE USED BY LPF
+         18 ELEMENTS IN IX ARRAY ARE USED BY LPF
+
+ PCG2 -- CONJUGATE GRADIENT SOLUTION PACKAGE, VERSION 2.4, 12/29/98
+ MAXIMUM OF    100 CALLS OF SOLUTION ROUTINE
+ MAXIMUM OF    100 INTERNAL ITERATIONS PER CALL TO SOLUTION ROUTINE
+ MATRIX PRECONDITIONING TYPE :    1
+     391952 ELEMENTS IN X ARRAY ARE USED BY PCG
+      70000 ELEMENTS IN IX ARRAY ARE USED BY PCG
+     743904 ELEMENTS IN Z ARRAY ARE USED BY PCG
+
+ OBS1BAS6 -- OBSERVATION PROCESS, VERSION 1.0, 4/27/99
+ INPUT READ FROM UNIT 750
+ OBSERVATION GRAPH-DATA OUTPUT FILES
+ WILL BE PRINTED AND NAMED USING THE BASE: molok_GW_flow_model
+
+ HEAD OBSERVATIONS -- INPUT READ FROM UNIT 751
+ #           CoverageGUID ObjectType ID X Y Time OBNAME
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 8980, 720776.625, 2329814.25 ts_0 hed1
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 8981, 719957.6875, 2330573.0 ts_0 hed2
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 8982, 727710.8125, 2331723.25 ts_0 hed3
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 8983, 713020.5625, 2331159.0 ts_0 hed4
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 8984, 713106.4375, 2331191.0 ts_0 hed5
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 8985, 711602.125, 2331448.5 ts_0 hed6
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 8986, 710618.0625, 2331588.75 ts_0 hed7
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 8987, 708095.1875, 2332511.5 ts_0 hed8
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 8988, 708761.6875, 2332243.0 ts_0 hed9
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 8989, 709429.625, 2331943.5 ts_0 hed10
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 8990, 706585.875, 2333107.25 ts_0 hed11
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 8991, 705332.5, 2334107.0 ts_0 hed12
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 8992, 705972.75, 2333684.25 ts_0 hed13
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 8993, 705306.0625, 2333890.75 ts_0 hed14
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 8994, 708112.75, 2333342.25 ts_0 hed15
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 8995, 705704.125, 2334388.5 ts_0 hed16
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 8996, 705905.3125, 2334422.0 ts_0 hed17
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 8997, 701793.75, 2335478.5 ts_0 hed18
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 8998, 707581.75, 2336564.5 ts_0 hed19
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 8999, 697800.375, 2336260.75 ts_0 hed20
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 9000, 705608.0, 2339770.0 ts_0 hed21
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 9001, 705752.0, 2339802.75 ts_0 hed22
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 9002, 705463.25, 2339799.25 ts_0 hed23
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 9003, 695260.5625, 2338751.75 ts_0 hed24
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 9007, 705085.9375, 2339978.5 ts_0 hed25
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 9008, 703691.4375, 2340761.75 ts_0 hed26
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 9009, 698242.625, 2340356.5 ts_0 hed27
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 9010, 680545.875, 2341168.25 ts_0 hed28
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 9011, 687026.625, 2342132.0 ts_0 hed29
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 9012, 682090.75, 2342353.5 ts_0 hed30
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 9013, 710903.5625, 2343159.25 ts_0 hed31
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 9014, 682417.125, 2344111.0 ts_0 hed32
+ #GMSCOMMENT ff917aec-359b-4b61-a9a6-95d43a85a11d POINT 9015, 681977.0, 2344843.5 ts_0 hed33
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 8980, 720776.625, 2329814.25 ts_0 hed34
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 8981, 719957.6875, 2330573.0 ts_0 hed35
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 8982, 727710.8125, 2331723.25 ts_0 hed36
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 8983, 713020.5625, 2331159.0 ts_0 hed37
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 8984, 713106.4375, 2331191.0 ts_0 hed38
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 8985, 711602.125, 2331448.5 ts_0 hed39
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 8986, 710618.0625, 2331588.75 ts_0 hed40
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 8987, 708095.1875, 2332511.5 ts_0 hed41
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 8988, 708761.6875, 2332243.0 ts_0 hed42
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 8989, 709429.625, 2331943.5 ts_0 hed43
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 8990, 706585.875, 2333107.25 ts_0 hed44
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 8991, 705332.5, 2334107.0 ts_0 hed45
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 8992, 705972.75, 2333684.25 ts_0 hed46
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 8993, 705306.0625, 2333890.75 ts_0 hed47
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 8994, 708112.75, 2333342.25 ts_0 hed48
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 8995, 705704.125, 2334388.5 ts_0 hed49
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 8996, 705905.3125, 2334422.0 ts_0 hed50
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 8997, 701793.75, 2335478.5 ts_0 hed51
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 8998, 707581.75, 2336564.5 ts_0 hed52
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 8999, 697800.375, 2336260.75 ts_0 hed53
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 9000, 705608.0, 2339770.0 ts_0 hed54
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 9001, 705752.0, 2339802.75 ts_0 hed55
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 9002, 705463.25, 2339799.25 ts_0 hed56
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 9003, 695260.5625, 2338751.75 ts_0 hed57
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 9007, 705085.9375, 2339978.5 ts_0 hed58
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 9008, 703691.4375, 2340761.75 ts_0 hed59
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 9009, 698242.625, 2340356.5 ts_0 hed60
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 9010, 680545.875, 2341168.25 ts_0 hed61
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 9011, 687026.625, 2342132.0 ts_0 hed62
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 9012, 682090.75, 2342353.5 ts_0 hed63
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 9013, 710903.5625, 2343159.25 ts_0 hed64
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 9014, 682417.125, 2344111.0 ts_0 hed65
+ #GMSCOMMENT 4f57ceb9-dea0-43fe-a8c3-dced10bb1ad9 POINT 9015, 681977.0, 2344843.5 ts_0 hed66
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 8980, 720776.625, 2329814.25 ts_0 hed67
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 8981, 719957.6875, 2330573.0 ts_0 hed68
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 8982, 727710.8125, 2331723.25 ts_0 hed69
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 8983, 713020.5625, 2331159.0 ts_0 hed70
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 8984, 713106.4375, 2331191.0 ts_0 hed71
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 8985, 711602.125, 2331448.5 ts_0 hed72
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 8986, 710618.0625, 2331588.75 ts_0 hed73
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 8987, 708095.1875, 2332511.5 ts_0 hed74
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 8988, 708761.6875, 2332243.0 ts_0 hed75
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 8989, 709429.625, 2331943.5 ts_0 hed76
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 8990, 706585.875, 2333107.25 ts_0 hed77
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 8991, 705332.5, 2334107.0 ts_0 hed78
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 8992, 705972.75, 2333684.25 ts_0 hed79
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 8993, 705306.0625, 2333890.75 ts_0 hed80
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 8994, 708112.75, 2333342.25 ts_0 hed81
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 8995, 705704.125, 2334388.5 ts_0 hed82
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 8996, 705905.3125, 2334422.0 ts_0 hed83
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 8997, 701793.75, 2335478.5 ts_0 hed84
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 8998, 707581.75, 2336564.5 ts_0 hed85
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 8999, 697800.375, 2336260.75 ts_0 hed86
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 9001, 706342.41756169, 2339547.834997 ts_0 hed87
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 9002, 704491.87862562, 2340317.6591944 ts_0 hed88
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 9003, 695260.5625, 2338751.75 ts_0 hed89
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 9004, 715401.625, 2339002.5 ts_0 hed90
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 9005, 715797.6875, 2339623.5 ts_0 hed91
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 9006, 715944.25, 2339379.5 ts_0 hed92
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 9008, 703691.4375, 2340761.75 ts_0 hed93
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 9009, 698242.625, 2340356.5 ts_0 hed94
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 9010, 680545.875, 2341168.25 ts_0 hed95
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 9011, 687026.625, 2342132.0 ts_0 hed96
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 9012, 682090.75, 2342353.5 ts_0 hed97
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 9013, 710903.5625, 2343159.25 ts_0 hed98
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 9014, 682417.125, 2344111.0 ts_0 hed99
+ #GMSCOMMENT 7b1f9717-a10b-43e0-a4c4-7c2ee8f97be8 POINT 9015, 681977.0, 2344843.5 ts_0 hed100
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 8980, 720776.625, 2329814.25 ts_0 hed101
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 8981, 719957.6875, 2330573.0 ts_0 hed102
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 8982, 727710.8125, 2331723.25 ts_0 hed103
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 8983, 713020.5625, 2331159.0 ts_0 hed104
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 8984, 713106.4375, 2331191.0 ts_0 hed105
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 8985, 711602.125, 2331448.5 ts_0 hed106
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 8986, 710618.0625, 2331588.75 ts_0 hed107
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 8987, 708095.1875, 2332511.5 ts_0 hed108
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 8988, 708761.6875, 2332243.0 ts_0 hed109
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 8989, 709429.625, 2331943.5 ts_0 hed110
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 8990, 706585.875, 2333107.25 ts_0 hed111
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 8991, 705332.5, 2334107.0 ts_0 hed112
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 8992, 705972.75, 2333684.25 ts_0 hed113
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 8993, 705306.0625, 2333890.75 ts_0 hed114
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 8994, 708112.75, 2333342.25 ts_0 hed115
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 8995, 705704.125, 2334388.5 ts_0 hed116
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 8996, 705905.3125, 2334422.0 ts_0 hed117
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 8997, 701793.75, 2335478.5 ts_0 hed118
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 8998, 707581.75, 2336564.5 ts_0 hed119
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 8999, 697800.375, 2336260.75 ts_0 hed120
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 9001, 706342.41756169, 2339547.834997 ts_0 hed121
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 9002, 704491.87862562, 2340317.6591944 ts_0 hed122
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 9003, 695260.5625, 2338751.75 ts_0 hed123
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 9008, 703691.4375, 2340761.75 ts_0 hed124
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 9009, 698242.625, 2340356.5 ts_0 hed125
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 9010, 680545.875, 2341168.25 ts_0 hed126
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 9011, 687026.625, 2342132.0 ts_0 hed127
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 9012, 682090.75, 2342353.5 ts_0 hed128
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 9013, 710903.5625, 2343159.25 ts_0 hed129
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 9014, 682417.125, 2344111.0 ts_0 hed130
+ #GMSCOMMENT 1ad6a203-5a74-4dd0-abae-fab22108d553 POINT 9015, 681977.0, 2344843.5 ts_0 hed131
+
+ NUMBER OF HEADS....................................:  131
+   NUMBER OF MULTILAYER HEADS.......................:    0
+   MAXIMUM NUMBER OF LAYERS FOR MULTILAYER HEADS....:    3
+
+ OBS1DRN6 -- OBSERVATION PROCESS (DRAIN FLOW OBSERVATIONS)
+ VERSION 1.0, 10/15/98
+ INPUT READ FROM UNIT  754
+ #           CoverageGUID ObjectType ID X Y Time OBNAME
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 10 718060.54504649 2341329.0520495 1.0 no_dr0
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 12 720382.69790709 2340578.837525 1.0 no_dr1
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 14 720774.1304449 2339391.4968785 1.0 no_dr2
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 15 720012.02112684 2338071.3696716 1.0 no_dr3
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 16 720684.64870477 2337995.7085201 1.0 no_dr4
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 17 720338.91880862 2338718.6919424 1.0 no_dr5
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 18 719960.13619933 2338600.2062512 1.0 no_dr6
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 20 725381.09367677 2341981.7858681 1.0 no_dr7
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 21 725839.47815555 2341161.1627055 1.0 no_dr8
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 22 725429.64835313 2338282.9514032 1.0 no_dr9
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 23 725576.54757833 2337075.1252967 1.0 no_dr10
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 25 733526.05162401 2341189.0270023 1.0 no_dr11
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 6 712990.74892754 2341866.8513276 1.0 no_dr12
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 8 715181.8831648 2341102.2240495 1.0 no_dr13
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 10 718060.54504649 2341329.0520495 1.0 no_dr14
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 12 720382.69790709 2340578.837525 1.0 no_dr15
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 14 720774.1304449 2339391.4968785 1.0 no_dr16
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 15 720012.02112684 2338071.3696716 1.0 no_dr17
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 16 720684.64870477 2337995.7085201 1.0 no_dr18
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 17 720338.91880862 2338718.6919424 1.0 no_dr19
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 18 719960.13619933 2338600.2062512 1.0 no_dr20
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 20 725381.09367677 2341981.7858681 1.0 no_dr21
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 21 725839.47815555 2341161.1627055 1.0 no_dr22
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 22 725429.64835313 2338282.9514032 1.0 no_dr23
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 23 725576.54757833 2337075.1252967 1.0 no_dr24
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 25 733526.05162401 2341189.0270023 1.0 no_dr25
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 6 712990.74892754 2341866.8513276 1.0 no_dr26
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 8 715181.8831648 2341102.2240495 1.0 no_dr27
+
+ NUMBER OF FLOW-OBSERVATION DRAIN-CELL GROUPS.....:     28
+   NUMBER OF CELLS IN DRAIN-CELL GROUPS...........:    779
+   NUMBER OF DRAIN-CELL FLOWS.....................:     28
+
+ OBS1BAS6F -- OBSERVATION PROCESS (CONSTANT-HEAD BOUNDARY FLOW OBSERVATIONS)
+ VERSION 1.0, 12/03/99
+ INPUT READ FROM UNIT 755
+ #           CoverageGUID ObjectType ID X Y Time OBNAME
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 1 681233.93985294 2343576.11277 1.0 no_ch0
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 11 722518.23629593 2341947.8623826 1.0 no_ch1
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 19 730319.70236208 2343206.4557739 1.0 no_ch2
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 2 704734.24152427 2344158.2161452 1.0 no_ch3
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 24 719694.91627754 2329056.6840299 1.0 no_ch4
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 3 685206.95787271 2333336.8591783 1.0 no_ch5
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 5 713788.23830663 2342667.9254128 1.0 no_ch6
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 6353 688802.80730133 2345915.8320445 1.0 no_ch7
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 7 716229.52259392 2342545.2648797 1.0 no_ch8
+ #GMSCOMMENT 67fbf3b0-1d24-458e-86ab-e1451d76dd5f ARC 9 718723.62082238 2342496.6912493 1.0 no_ch9
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 1 681233.93985294 2343576.11277 1.0 no_ch10
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 11 722518.23629593 2341947.8623826 1.0 no_ch11
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 19 730319.70236208 2343206.4557739 1.0 no_ch12
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 2 704734.24152427 2344158.2161452 1.0 no_ch13
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 24 719694.91627754 2329056.6840299 1.0 no_ch14
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 3 685206.95787271 2333336.8591783 1.0 no_ch15
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 5 713788.23830663 2342667.9254128 1.0 no_ch16
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 6353 688802.80730133 2345915.8320445 1.0 no_ch17
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 7 716229.52259392 2342545.2648797 1.0 no_ch18
+ #GMSCOMMENT 72e0bcd9-9ce3-4335-a1b4-71fbc0464a72 ARC 9 718723.62082238 2342496.6912493 1.0 no_ch19
+
+ NUMBER OF FLOW-OBSERVATION CONSTANT-HEAD-CELL GROUPS:   20
+   NUMBER OF CELLS IN CONSTANT-HEAD-CELL GROUPS......: 2508
+   NUMBER OF CONSTANT-HEAD-CELL FLOWS................:   20
+
+      23656 ELEMENTS IN X ARRAY ARE USED FOR OBSERVATIONS
+       2450 ELEMENTS IN Z ARRAY ARE USED FOR OBSERVATIONS
+       1697 ELEMENTS IN IX ARRAY ARE USED FOR OBSERVATIONS
+
+ COMMON ERROR VARIANCE FOR ALL OBSERVATIONS SET TO:       1.000    
+
+     973536  ELEMENTS OF X ARRAY USED OUT OF     973536
+     746354  ELEMENTS OF Z ARRAY USED OUT OF     746354
+      71715  ELEMENTS OF IX ARRAY USED OUT OF      71715
+          0  ELEMENTS OF XHS ARRAY USED OUT OF          1
+
+ HEAD OBSERVATION VARIANCES ARE MULTIPLIED BY:       1.000    
+
+ OBSERVED HEAD DATA -- TIME OFFSETS ARE MULTIPLIED BY:   1.0000    
+
+                    REFER.
+       OBSERVATION  STRESS    TIME                              STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET    OBSERVATION  STATISTIC     TYPE      SYM.
+     1 hed1             1    0.000       1.410       6.080      STD. DEV.      1
+     2 hed2             1    0.000       1.510       6.080      STD. DEV.      1
+     3 hed3             1    0.000       1.300       6.080      STD. DEV.      1
+     4 hed4             1    0.000      0.6000       6.080      STD. DEV.      1
+     5 hed5             1    0.000      0.5500       6.080      STD. DEV.      1
+     6 hed6             1    0.000      0.5200       6.080      STD. DEV.      1
+     7 hed7             1    0.000      0.3700       6.080      STD. DEV.      1
+     8 hed8             1    0.000      0.3600       6.080      STD. DEV.      1
+     9 hed9             1    0.000      0.3400       6.080      STD. DEV.      1
+    10 hed10            1    0.000      0.3400       6.080      STD. DEV.      1
+    11 hed11            1    0.000      0.3000       6.080      STD. DEV.      1
+    12 hed12            1    0.000      0.3900       6.080      STD. DEV.      1
+    13 hed13            1    0.000      0.7100       6.080      STD. DEV.      1
+    14 hed14            1    0.000      0.7500       6.080      STD. DEV.      1
+    15 hed15            1    0.000      0.5000       6.080      STD. DEV.      1
+    16 hed16            1    0.000      0.8100       6.080      STD. DEV.      1
+    17 hed17            1    0.000      0.7600       6.080      STD. DEV.      1
+    18 hed18            1    0.000      0.7500       6.080      STD. DEV.      1
+    19 hed19            1    0.000       1.900       6.080      STD. DEV.      1
+    20 hed20            1    0.000       1.590       6.080      STD. DEV.      1
+    21 hed21            1    0.000       3.270       6.080      STD. DEV.      1
+    22 hed22            1    0.000       2.260       6.080      STD. DEV.      1
+    23 hed23            1    0.000       3.570       6.080      STD. DEV.      1
+    24 hed24            1    0.000      0.9100       6.080      STD. DEV.      1
+    25 hed25            1    0.000       3.730       6.080      STD. DEV.      1
+    26 hed26            1    0.000       3.560       6.080      STD. DEV.      1
+    27 hed27            1    0.000       1.730       6.080      STD. DEV.      1
+    28 hed28            1    0.000       2.040       6.080      STD. DEV.      1
+    29 hed29            1    0.000       1.720       6.080      STD. DEV.      1
+    30 hed30            1    0.000       1.740       6.080      STD. DEV.      1
+    31 hed31            1    0.000       2.740       6.080      STD. DEV.      1
+    32 hed32            1    0.000      0.1800       6.080      STD. DEV.      1
+    33 hed33            1    0.000       2.230       6.080      STD. DEV.      1
+    34 hed34            1    0.000       1.410       3.040      STD. DEV.      1
+    35 hed35            1    0.000       1.510       3.040      STD. DEV.      1
+    36 hed36            1    0.000       1.300       3.040      STD. DEV.      1
+    37 hed37            1    0.000      0.6000       3.040      STD. DEV.      1
+    38 hed38            1    0.000      0.5500       3.040      STD. DEV.      1
+    39 hed39            1    0.000      0.5200       3.040      STD. DEV.      1
+    40 hed40            1    0.000      0.3700       3.040      STD. DEV.      1
+    41 hed41            1    0.000      0.3600       3.040      STD. DEV.      1
+    42 hed42            1    0.000      0.3400       3.040      STD. DEV.      1
+    43 hed43            1    0.000      0.3400       3.040      STD. DEV.      1
+    44 hed44            1    0.000      0.3000       3.040      STD. DEV.      1
+    45 hed45            1    0.000      0.3900       3.040      STD. DEV.      1
+    46 hed46            1    0.000      0.7100       3.040      STD. DEV.      1
+    47 hed47            1    0.000      0.7500       3.040      STD. DEV.      1
+    48 hed48            1    0.000      0.5000       3.040      STD. DEV.      1
+    49 hed49            1    0.000      0.8100       3.040      STD. DEV.      1
+    50 hed50            1    0.000      0.7600       3.040      STD. DEV.      1
+    51 hed51            1    0.000      0.7500       3.040      STD. DEV.      1
+    52 hed52            1    0.000       1.900       3.040      STD. DEV.      1
+    53 hed53            1    0.000       1.590       3.040      STD. DEV.      1
+    54 hed54            1    0.000       3.270       3.040      STD. DEV.      1
+    55 hed55            1    0.000       2.260       3.040      STD. DEV.      1
+    56 hed56            1    0.000       3.570       3.040      STD. DEV.      1
+    57 hed57            1    0.000      0.9100       3.040      STD. DEV.      1
+    58 hed58            1    0.000       3.730       6.080      STD. DEV.      1
+    59 hed59            1    0.000       3.560       3.040      STD. DEV.      1
+    60 hed60            1    0.000       1.730       3.040      STD. DEV.      1
+    61 hed61            1    0.000       2.040       3.040      STD. DEV.      1
+    62 hed62            1    0.000       1.720       3.040      STD. DEV.      1
+    63 hed63            1    0.000       1.740       3.040      STD. DEV.      1
+    64 hed64            1    0.000       2.740       3.040      STD. DEV.      1
+    65 hed65            1    0.000      0.1800       3.040      STD. DEV.      1
+    66 hed66            1    0.000       2.230       3.040      STD. DEV.      1
+    67 hed67            1    0.000       1.410      0.3040      STD. DEV.      1
+    68 hed68            1    0.000       1.510      0.3040      STD. DEV.      1
+    69 hed69            1    0.000       1.300      0.3040      STD. DEV.      1
+    70 hed70            1    0.000      0.6000      0.3040      STD. DEV.      1
+    71 hed71            1    0.000      0.5500      0.3040      STD. DEV.      1
+    72 hed72            1    0.000      0.5200      0.3040      STD. DEV.      1
+    73 hed73            1    0.000      0.3700      0.3040      STD. DEV.      1
+    74 hed74            1    0.000      0.3600      0.3040      STD. DEV.      1
+    75 hed75            1    0.000      0.3400      0.3040      STD. DEV.      1
+    76 hed76            1    0.000      0.3400      0.3040      STD. DEV.      1
+    77 hed77            1    0.000      0.3000      0.3040      STD. DEV.      1
+    78 hed78            1    0.000      0.3900      0.3040      STD. DEV.      1
+    79 hed79            1    0.000      0.7100      0.3040      STD. DEV.      1
+    80 hed80            1    0.000      0.7500      0.3040      STD. DEV.      1
+    81 hed81            1    0.000      0.5000      0.3040      STD. DEV.      1
+    82 hed82            1    0.000      0.8100      0.3040      STD. DEV.      1
+    83 hed83            1    0.000      0.7600      0.3040      STD. DEV.      1
+    84 hed84            1    0.000      0.7500      0.3040      STD. DEV.      1
+    85 hed85            1    0.000       1.900      0.3040      STD. DEV.      1
+    86 hed86            1    0.000       1.590      0.3040      STD. DEV.      1
+    87 hed87            1    0.000       2.260      0.3040      STD. DEV.      1
+    88 hed88            1    0.000       3.570      0.3040      STD. DEV.      1
+    89 hed89            1    0.000      0.9100      0.3040      STD. DEV.      1
+    90 hed90            1    0.000       301.5      0.3040      STD. DEV.      1
+    91 hed91            1    0.000       264.1      0.3040      STD. DEV.      1
+    92 hed92            1    0.000       288.7      0.3040      STD. DEV.      1
+    93 hed93            1    0.000       3.560      0.3040      STD. DEV.      1
+    94 hed94            1    0.000       1.730      0.3040      STD. DEV.      1
+    95 hed95            1    0.000       2.040      0.3040      STD. DEV.      1
+    96 hed96            1    0.000       1.720      0.3040      STD. DEV.      1
+    97 hed97            1    0.000       1.740      0.3040      STD. DEV.      1
+    98 hed98            1    0.000       2.740      0.3040      STD. DEV.      1
+    99 hed99            1    0.000      0.1800      0.3040      STD. DEV.      1
+   100 hed100           1    0.000       2.230      0.3040      STD. DEV.      1
+   101 hed101           1    0.000       1.410      0.3040      STD. DEV.      1
+   102 hed102           1    0.000       1.510      0.3040      STD. DEV.      1
+   103 hed103           1    0.000       1.300      0.3040      STD. DEV.      1
+   104 hed104           1    0.000      0.6000      0.3040      STD. DEV.      1
+   105 hed105           1    0.000      0.5500      0.3040      STD. DEV.      1
+   106 hed106           1    0.000      0.5200      0.3040      STD. DEV.      1
+   107 hed107           1    0.000      0.3700      0.3040      STD. DEV.      1
+   108 hed108           1    0.000      0.3600      0.3040      STD. DEV.      1
+   109 hed109           1    0.000      0.3400      0.3040      STD. DEV.      1
+   110 hed110           1    0.000      0.3400      0.3040      STD. DEV.      1
+   111 hed111           1    0.000      0.3000      0.3040      STD. DEV.      1
+   112 hed112           1    0.000      0.3900      0.3040      STD. DEV.      1
+   113 hed113           1    0.000      0.7100      0.3040      STD. DEV.      1
+   114 hed114           1    0.000      0.7500      0.3040      STD. DEV.      1
+   115 hed115           1    0.000      0.5000      0.3040      STD. DEV.      1
+   116 hed116           1    0.000      0.8100      0.3040      STD. DEV.      1
+   117 hed117           1    0.000      0.7600      0.3040      STD. DEV.      1
+   118 hed118           1    0.000      0.7500      0.3040      STD. DEV.      1
+   119 hed119           1    0.000       1.900      0.3040      STD. DEV.      1
+   120 hed120           1    0.000       1.590      0.3040      STD. DEV.      1
+   121 hed121           1    0.000       2.260      0.3040      STD. DEV.      1
+   122 hed122           1    0.000       3.570      0.3040      STD. DEV.      1
+   123 hed123           1    0.000      0.9100      0.3040      STD. DEV.      1
+   124 hed124           1    0.000       3.560      0.3040      STD. DEV.      1
+   125 hed125           1    0.000       1.730      0.3040      STD. DEV.      1
+   126 hed126           1    0.000       2.040      0.3040      STD. DEV.      1
+   127 hed127           1    0.000       1.720      0.3040      STD. DEV.      1
+   128 hed128           1    0.000       1.740      0.3040      STD. DEV.      1
+   129 hed129           1    0.000       2.740      0.3040      STD. DEV.      1
+   130 hed130           1    0.000      0.1800      0.3040      STD. DEV.      1
+   131 hed131           1    0.000       2.230      0.3040      STD. DEV.      1
+
+                                                     HEAD CHANGE
+                                                      REFERENCE
+        OBSERVATION                   ROW     COL    OBSERVATION
+  OBS#     NAME       LAY  ROW  COL  OFFSET  OFFSET   (IF > 0)
+     1  hed1            1  160  257   0.436  -0.152        0
+     2  hed2            1  154  254   0.309  -0.074        0
+     3  hed3            1  129  310   0.406   0.422        0
+     4  hed4            1  144  203   0.338   0.493        0
+     5  hed5            1  144  205  -0.449  -0.189        0
+     6  hed6            1  137  191  -0.220  -0.211        0
+     7  hed7            1  132  177  -0.068   0.304        0
+     8  hed8            1  121  155   0.266  -0.146        0
+     9  hed9            1  123  162   0.394   0.466        0
+    10  hed10           1  126  167   0.430   0.326        0
+    11  hed11           1  118  138  -0.327   0.446        0
+    12  hed12           1  114  119  -0.491   0.220        0
+    13  hed13           1  115  132   0.082   0.467        0
+    14  hed14           1  114  119   0.287  -0.222        0
+    15  hed15           1  117  155  -0.468   0.144        0
+    16  hed16           1  113  128  -0.493   0.127        0
+    17  hed17           1  112  132   0.388  -0.454        0
+    18  hed18           1  109   94  -0.373  -0.056        0
+    19  hed19           1  105  147  -0.239  -0.079        0
+    20  hed20           1  106   81  -0.157  -0.434        0
+    21  hed21           1   78  126  -0.219  -0.401        0
+    22  hed22           1   76  129   0.439   0.084        0
+    23  hed23           1   77  121  -0.438   0.485        0
+    24  hed24           1   94   72  -0.109   0.058        0
+    25  hed25           1   71  115   0.392  -0.075        0
+    26  hed26           1   61  101   0.295   0.371        0
+    27  hed27           1   66   82  -0.470   0.048        0
+    28  hed28           1   57   23   0.162  -0.236        0
+    29  hed29           1   44   44  -0.135   0.474        0
+    30  hed30           1   41   28   0.237  -0.061        0
+    31  hed31           1   31  182   0.429  -0.211        0
+    32  hed32           1   20   29   0.299   0.032        0
+    33  hed33           1   16   28   0.025  -0.442        0
+    34  hed34           1  160  257   0.436  -0.152        0
+    35  hed35           1  154  254   0.309  -0.074        0
+    36  hed36           1  129  310   0.406   0.422        0
+    37  hed37           1  144  203   0.338   0.493        0
+    38  hed38           1  144  205  -0.449  -0.189        0
+    39  hed39           1  137  191  -0.220  -0.211        0
+    40  hed40           1  132  177  -0.068   0.304        0
+    41  hed41           1  121  155   0.266  -0.146        0
+    42  hed42           1  123  162   0.394   0.466        0
+    43  hed43           1  126  167   0.430   0.326        0
+    44  hed44           1  118  138  -0.327   0.446        0
+    45  hed45           1  114  119  -0.491   0.220        0
+    46  hed46           1  115  132   0.082   0.467        0
+    47  hed47           1  114  119   0.287  -0.222        0
+    48  hed48           1  117  155  -0.468   0.144        0
+    49  hed49           1  113  128  -0.493   0.127        0
+    50  hed50           1  112  132   0.388  -0.454        0
+    51  hed51           1  109   94  -0.373  -0.056        0
+    52  hed52           1  105  147  -0.239  -0.079        0
+    53  hed53           1  106   81  -0.157  -0.434        0
+    54  hed54           1   78  126  -0.219  -0.401        0
+    55  hed55           1   76  129   0.439   0.084        0
+    56  hed56           1   77  121  -0.438   0.485        0
+    57  hed57           1   94   72  -0.109   0.058        0
+    58  hed58           1   71  115   0.392  -0.075        0
+    59  hed59           1   61  101   0.295   0.371        0
+    60  hed60           1   66   82  -0.470   0.048        0
+    61  hed61           1   57   23   0.162  -0.236        0
+    62  hed62           1   44   44  -0.135   0.474        0
+    63  hed63           1   41   28   0.237  -0.061        0
+    64  hed64           1   31  182   0.429  -0.211        0
+    65  hed65           1   20   29   0.299   0.032        0
+    66  hed66           1   16   28   0.025  -0.442        0
+    67  hed67           1  160  257   0.436  -0.152        0
+    68  hed68           1  154  254   0.309  -0.074        0
+    69  hed69           1  129  310   0.406   0.422        0
+    70  hed70           1  144  203   0.338   0.493        0
+    71  hed71           1  144  205  -0.449  -0.189        0
+    72  hed72           1  137  191  -0.220  -0.211        0
+    73  hed73           1  132  177  -0.068   0.304        0
+    74  hed74           1  121  155   0.266  -0.146        0
+    75  hed75           1  123  162   0.394   0.466        0
+    76  hed76           1  126  167   0.430   0.326        0
+    77  hed77           1  118  138  -0.327   0.446        0
+    78  hed78           1  114  119  -0.491   0.220        0
+    79  hed79           1  115  132   0.082   0.467        0
+    80  hed80           1  114  119   0.287  -0.222        0
+    81  hed81           1  117  155  -0.468   0.144        0
+    82  hed82           1  113  128  -0.493   0.127        0
+    83  hed83           1  112  132   0.388  -0.454        0
+    84  hed84           1  109   94  -0.373  -0.056        0
+    85  hed85           1  105  147  -0.239  -0.079        0
+    86  hed86           1  106   81  -0.157  -0.434        0
+    87  hed87           1   83  136  -0.088   0.440        0
+    88  hed88           1   66  107   0.012   0.024        0
+    89  hed89           1   94   72  -0.109   0.058        0
+    90  hed90           1   91  237   0.500  -0.048        0
+    91  hed91           1   81  239   0.219  -0.138        0
+    92  hed92           1   86  239   0.361   0.500        0
+    93  hed93           1   61  101   0.295   0.371        0
+    94  hed94           1   66   82  -0.470   0.048        0
+    95  hed95           1   57   23   0.162  -0.236        0
+    96  hed96           1   44   44  -0.135   0.474        0
+    97  hed97           1   41   28   0.237  -0.061        0
+    98  hed98           1   31  182   0.429  -0.211        0
+    99  hed99           1   20   29   0.299   0.032        0
+   100  hed100          1   16   28   0.025  -0.442        0
+   101  hed101          1  160  257   0.436  -0.152        0
+   102  hed102          1  154  254   0.309  -0.074        0
+   103  hed103          1  129  310   0.406   0.422        0
+   104  hed104          1  144  203   0.338   0.493        0
+   105  hed105          1  144  205  -0.449  -0.189        0
+   106  hed106          1  137  191  -0.220  -0.211        0
+   107  hed107          1  132  177  -0.068   0.304        0
+   108  hed108          1  121  155   0.266  -0.146        0
+   109  hed109          1  123  162   0.394   0.466        0
+   110  hed110          1  126  167   0.430   0.326        0
+   111  hed111          1  118  138  -0.327   0.446        0
+   112  hed112          1  114  119  -0.491   0.220        0
+   113  hed113          1  115  132   0.082   0.467        0
+   114  hed114          1  114  119   0.287  -0.222        0
+   115  hed115          1  117  155  -0.468   0.144        0
+   116  hed116          1  113  128  -0.493   0.127        0
+   117  hed117          1  112  132   0.388  -0.454        0
+   118  hed118          1  109   94  -0.373  -0.056        0
+   119  hed119          1  105  147  -0.239  -0.079        0
+   120  hed120          1  106   81  -0.157  -0.434        0
+   121  hed121          1   83  136  -0.088   0.440        0
+   122  hed122          1   66  107   0.012   0.024        0
+   123  hed123          1   94   72  -0.109   0.058        0
+   124  hed124          1   61  101   0.295   0.371        0
+   125  hed125          1   66   82  -0.470   0.048        0
+   126  hed126          1   57   23   0.162  -0.236        0
+   127  hed127          1   44   44  -0.135   0.474        0
+   128  hed128          1   41   28   0.237  -0.061        0
+   129  hed129          1   31  182   0.429  -0.211        0
+   130  hed130          1   20   29   0.299   0.032        0
+   131  hed131          1   16   28   0.025  -0.442        0
+
+ DRAIN-CELL FLOW OBSERVATION VARIANCES ARE MULTIPLIED BY:       1.000    
+
+ OBSERVED DRAIN-CELL FLOW DATA
+ -- TIME OFFSETS ARE MULTIPLIED BY:   1.0000    
+
+ GROUP NUMBER:      1    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:     14
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   132 no_dr0           1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   63.   247.     1.00
+          1.   62.   247.     1.00
+          1.   61.   247.     1.00
+          1.   60.   247.     1.00
+          1.   59.   247.     1.00
+          1.   58.   247.     1.00
+          1.   57.   247.     1.00
+          1.   56.   247.     1.00
+          1.   55.   247.     1.00
+          1.   54.   247.     1.00
+          1.   53.   247.     1.00
+          1.   52.   247.     1.00
+          1.   52.   246.     1.00
+          1.   51.   246.     1.00
+
+ GROUP NUMBER:      2    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:     37
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   133 no_dr1           1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   84.   255.     1.00
+          1.   83.   255.     1.00
+          1.   82.   255.     1.00
+          1.   81.   255.     1.00
+          1.   80.   255.     1.00
+          1.   79.   255.     1.00
+          1.   78.   255.     1.00
+          1.   77.   255.     1.00
+          1.   76.   255.     1.00
+          1.   75.   255.     1.00
+          1.   74.   255.     1.00
+          1.   73.   255.     1.00
+          1.   72.   255.     1.00
+          1.   71.   255.     1.00
+          1.   70.   255.     1.00
+          1.   69.   255.     1.00
+          1.   68.   255.     1.00
+          1.   67.   255.     1.00
+          1.   66.   255.     1.00
+          1.   65.   255.     1.00
+          1.   64.   255.     1.00
+          1.   64.   256.     1.00
+          1.   64.   255.     1.00
+          1.   63.   255.     1.00
+          1.   62.   255.     1.00
+          1.   61.   255.     1.00
+          1.   60.   255.     1.00
+          1.   59.   255.     1.00
+          1.   58.   255.     1.00
+          1.   57.   255.     1.00
+          1.   57.   254.     1.00
+          1.   56.   254.     1.00
+          1.   55.   254.     1.00
+          1.   54.   254.     1.00
+          1.   53.   254.     1.00
+          1.   52.   254.     1.00
+          1.   51.   254.     1.00
+
+ GROUP NUMBER:      3    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:     11
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   134 no_dr2           1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   90.   259.     1.00
+          1.   90.   258.     1.00
+          1.   89.   258.     1.00
+          1.   88.   258.     1.00
+          1.   88.   257.     1.00
+          1.   87.   257.     1.00
+          1.   86.   257.     1.00
+          1.   85.   257.     1.00
+          1.   85.   256.     1.00
+          1.   85.   255.     1.00
+          1.   84.   255.     1.00
+
+ GROUP NUMBER:      4    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:      5
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   135 no_dr3           1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   99.   253.     1.00
+          1.   99.   254.     1.00
+          1.   98.   254.     1.00
+          1.   98.   255.     1.00
+          1.   97.   255.     1.00
+
+ GROUP NUMBER:      5    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:      7
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   136 no_dr4           1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.  101.   257.     1.00
+          1.  100.   257.     1.00
+          1.   99.   257.     1.00
+          1.   99.   256.     1.00
+          1.   98.   256.     1.00
+          1.   98.   255.     1.00
+          1.   97.   255.     1.00
+
+ GROUP NUMBER:      6    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:     11
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   137 no_dr5           1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   97.   255.     0.00
+          1.   97.   255.     0.00
+          1.   97.   255.     1.00
+          1.   96.   255.     1.00
+          1.   95.   255.     1.00
+          1.   94.   255.     1.00
+          1.   93.   255.     1.00
+          1.   92.   255.     1.00
+          1.   91.   255.     1.00
+          1.   90.   255.     1.00
+          1.   89.   255.     1.00
+
+ GROUP NUMBER:      7    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:     14
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   138 no_dr6           1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   94.   251.     1.00
+          1.   94.   252.     1.00
+          1.   95.   252.     1.00
+          1.   95.   253.     1.00
+          1.   96.   253.     1.00
+          1.   95.   253.     1.00
+          1.   95.   254.     1.00
+          1.   94.   254.     1.00
+          1.   94.   255.     1.00
+          1.   93.   255.     1.00
+          1.   92.   255.     1.00
+          1.   91.   255.     1.00
+          1.   90.   255.     1.00
+          1.   89.   255.     1.00
+
+ GROUP NUMBER:      8    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:     13
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   139 no_dr7           1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   52.   287.     1.00
+          1.   51.   287.     1.00
+          1.   50.   287.     1.00
+          1.   49.   287.     1.00
+          1.   49.   286.     1.00
+          1.   48.   286.     1.00
+          1.   47.   286.     1.00
+          1.   46.   286.     1.00
+          1.   46.   285.     1.00
+          1.   45.   285.     1.00
+          1.   44.   285.     1.00
+          1.   43.   285.     1.00
+          1.   43.   284.     1.00
+
+ GROUP NUMBER:      9    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:     26
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   140 no_dr8           1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   64.   300.     1.00
+          1.   63.   300.     1.00
+          1.   63.   299.     1.00
+          1.   62.   299.     1.00
+          1.   62.   298.     1.00
+          1.   61.   298.     1.00
+          1.   61.   297.     1.00
+          1.   60.   297.     1.00
+          1.   60.   296.     1.00
+          1.   59.   296.     1.00
+          1.   59.   295.     1.00
+          1.   59.   294.     1.00
+          1.   58.   294.     1.00
+          1.   58.   293.     1.00
+          1.   57.   293.     1.00
+          1.   57.   292.     1.00
+          1.   56.   292.     1.00
+          1.   56.   291.     1.00
+          1.   55.   291.     1.00
+          1.   55.   290.     1.00
+          1.   54.   290.     1.00
+          1.   54.   289.     1.00
+          1.   53.   289.     1.00
+          1.   53.   288.     1.00
+          1.   52.   288.     1.00
+          1.   52.   287.     1.00
+
+ GROUP NUMBER:     10    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:    100
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   141 no_dr9           1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.  103.   265.     1.00
+          1.  103.   266.     1.00
+          1.  103.   267.     1.00
+          1.  103.   268.     1.00
+          1.  103.   269.     1.00
+          1.  103.   270.     1.00
+          1.  103.   271.     1.00
+          1.  103.   272.     1.00
+          1.  103.   273.     1.00
+          1.  103.   274.     1.00
+          1.  103.   275.     1.00
+          1.  103.   276.     1.00
+          1.  102.   276.     1.00
+          1.  102.   277.     1.00
+          1.  102.   278.     1.00
+          1.  102.   279.     1.00
+          1.  102.   280.     1.00
+          1.  101.   280.     1.00
+          1.  101.   281.     1.00
+          1.  101.   282.     1.00
+          1.  101.   283.     1.00
+          1.  101.   284.     1.00
+          1.  100.   284.     1.00
+          1.  100.   285.     1.00
+          1.  100.   286.     1.00
+          1.   99.   286.     1.00
+          1.   98.   286.     1.00
+          1.   97.   286.     1.00
+          1.   96.   286.     1.00
+          1.   95.   286.     1.00
+          1.   95.   285.     1.00
+          1.   95.   284.     1.00
+          1.   94.   284.     1.00
+          1.   94.   283.     1.00
+          1.   93.   283.     1.00
+          1.   93.   282.     1.00
+          1.   92.   282.     1.00
+          1.   92.   281.     1.00
+          1.   92.   280.     1.00
+          1.   91.   280.     1.00
+          1.   91.   279.     1.00
+          1.   90.   279.     1.00
+          1.   90.   278.     1.00
+          1.   89.   278.     1.00
+          1.   88.   278.     1.00
+          1.   88.   277.     1.00
+          1.   87.   277.     1.00
+          1.   86.   277.     1.00
+          1.   86.   276.     1.00
+          1.   85.   276.     1.00
+          1.   84.   276.     1.00
+          1.   83.   276.     1.00
+          1.   83.   275.     1.00
+          1.   82.   275.     1.00
+          1.   81.   275.     1.00
+          1.   80.   275.     1.00
+          1.   79.   275.     1.00
+          1.   78.   275.     1.00
+          1.   77.   275.     1.00
+          1.   76.   275.     1.00
+          1.   75.   275.     1.00
+          1.   74.   275.     1.00
+          1.   74.   274.     1.00
+          1.   73.   274.     1.00
+          1.   72.   274.     1.00
+          1.   71.   274.     1.00
+          1.   70.   274.     1.00
+          1.   69.   274.     1.00
+          1.   68.   274.     1.00
+          1.   67.   274.     1.00
+          1.   66.   274.     1.00
+          1.   65.   274.     1.00
+          1.   65.   273.     1.00
+          1.   65.   274.     1.00
+          1.   64.   274.     1.00
+          1.   63.   274.     1.00
+          1.   62.   274.     1.00
+          1.   62.   275.     1.00
+          1.   61.   275.     1.00
+          1.   60.   275.     1.00
+          1.   60.   276.     1.00
+          1.   59.   276.     1.00
+          1.   58.   276.     1.00
+          1.   58.   277.     1.00
+          1.   57.   277.     1.00
+          1.   57.   278.     1.00
+          1.   56.   278.     1.00
+          1.   56.   279.     1.00
+          1.   55.   279.     1.00
+          1.   55.   280.     1.00
+          1.   54.   280.     1.00
+          1.   54.   281.     1.00
+          1.   53.   281.     1.00
+          1.   53.   282.     1.00
+          1.   53.   283.     1.00
+          1.   53.   284.     1.00
+          1.   52.   284.     1.00
+          1.   52.   285.     1.00
+          1.   52.   286.     1.00
+          1.   52.   287.     1.00
+
+ GROUP NUMBER:     11    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:     23
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   142 no_dr10          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.  105.   303.     1.00
+          1.  105.   302.     1.00
+          1.  105.   301.     1.00
+          1.  105.   300.     1.00
+          1.  104.   300.     1.00
+          1.  104.   299.     1.00
+          1.  104.   298.     1.00
+          1.  104.   297.     1.00
+          1.  104.   296.     1.00
+          1.  104.   295.     1.00
+          1.  104.   294.     1.00
+          1.  104.   293.     1.00
+          1.  104.   292.     1.00
+          1.  104.   291.     1.00
+          1.  103.   291.     1.00
+          1.  103.   290.     1.00
+          1.  103.   289.     1.00
+          1.  103.   288.     1.00
+          1.  102.   288.     1.00
+          1.  102.   287.     1.00
+          1.  101.   287.     1.00
+          1.  100.   287.     1.00
+          1.  100.   286.     1.00
+
+ GROUP NUMBER:     12    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:     33
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   143 no_dr11          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   57.   326.     1.00
+          1.   57.   327.     1.00
+          1.   57.   328.     1.00
+          1.   57.   329.     1.00
+          1.   57.   330.     1.00
+          1.   57.   331.     1.00
+          1.   58.   331.     1.00
+          1.   58.   332.     1.00
+          1.   57.   332.     1.00
+          1.   57.   333.     1.00
+          1.   57.   334.     1.00
+          1.   57.   335.     1.00
+          1.   57.   336.     1.00
+          1.   57.   337.     1.00
+          1.   56.   337.     1.00
+          1.   56.   338.     1.00
+          1.   56.   339.     1.00
+          1.   56.   340.     1.00
+          1.   55.   340.     1.00
+          1.   55.   341.     1.00
+          1.   55.   342.     1.00
+          1.   55.   343.     1.00
+          1.   55.   344.     1.00
+          1.   54.   344.     1.00
+          1.   54.   345.     1.00
+          1.   54.   346.     1.00
+          1.   54.   347.     1.00
+          1.   53.   347.     1.00
+          1.   53.   348.     1.00
+          1.   53.   349.     1.00
+          1.   52.   349.     1.00
+          1.   52.   350.     1.00
+          1.   51.   350.     1.00
+
+ GROUP NUMBER:     13    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:     30
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   144 no_dr12          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   60.   201.     1.00
+          1.   59.   201.     1.00
+          1.   58.   201.     1.00
+          1.   57.   201.     1.00
+          1.   57.   202.     1.00
+          1.   56.   202.     1.00
+          1.   55.   202.     1.00
+          1.   54.   202.     1.00
+          1.   53.   202.     1.00
+          1.   52.   202.     1.00
+          1.   51.   202.     1.00
+          1.   51.   203.     1.00
+          1.   50.   203.     1.00
+          1.   49.   203.     1.00
+          1.   48.   203.     1.00
+          1.   47.   203.     1.00
+          1.   46.   203.     1.00
+          1.   46.   204.     1.00
+          1.   45.   204.     1.00
+          1.   44.   204.     1.00
+          1.   43.   204.     1.00
+          1.   43.   205.     1.00
+          1.   42.   205.     1.00
+          1.   41.   205.     1.00
+          1.   40.   205.     1.00
+          1.   40.   206.     1.00
+          1.   39.   206.     1.00
+          1.   38.   206.     1.00
+          1.   37.   206.     1.00
+          1.   37.   207.     1.00
+
+ GROUP NUMBER:     14    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:     56
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   145 no_dr13          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   85.   240.     1.00
+          1.   84.   240.     1.00
+          1.   83.   240.     1.00
+          1.   82.   240.     1.00
+          1.   81.   240.     1.00
+          1.   81.   239.     1.00
+          1.   80.   239.     1.00
+          1.   79.   239.     1.00
+          1.   78.   239.     1.00
+          1.   77.   239.     1.00
+          1.   76.   239.     1.00
+          1.   75.   239.     1.00
+          1.   74.   239.     1.00
+          1.   74.   238.     1.00
+          1.   73.   238.     1.00
+          1.   72.   238.     1.00
+          1.   71.   238.     1.00
+          1.   70.   238.     1.00
+          1.   69.   238.     1.00
+          1.   69.   237.     1.00
+          1.   68.   237.     1.00
+          1.   67.   237.     1.00
+          1.   66.   237.     1.00
+          1.   65.   237.     1.00
+          1.   64.   237.     1.00
+          1.   63.   237.     1.00
+          1.   62.   237.     1.00
+          1.   61.   237.     1.00
+          1.   60.   237.     1.00
+          1.   59.   237.     1.00
+          1.   59.   236.     1.00
+          1.   58.   236.     1.00
+          1.   57.   236.     1.00
+          1.   57.   235.     1.00
+          1.   56.   235.     1.00
+          1.   56.   234.     1.00
+          1.   55.   234.     1.00
+          1.   54.   234.     1.00
+          1.   54.   233.     1.00
+          1.   53.   233.     1.00
+          1.   52.   233.     1.00
+          1.   51.   233.     1.00
+          1.   51.   232.     1.00
+          1.   50.   232.     1.00
+          1.   49.   232.     1.00
+          1.   48.   232.     1.00
+          1.   47.   232.     1.00
+          1.   47.   231.     1.00
+          1.   46.   231.     1.00
+          1.   45.   231.     1.00
+          1.   44.   231.     1.00
+          1.   43.   231.     1.00
+          1.   43.   230.     1.00
+          1.   42.   230.     1.00
+          1.   41.   230.     1.00
+          1.   40.   230.     1.00
+
+ GROUP NUMBER:     15    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:     15
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   146 no_dr14          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   63.   247.     0.00
+          1.   63.   247.     1.00
+          1.   62.   247.     1.00
+          1.   61.   247.     1.00
+          1.   60.   247.     1.00
+          1.   59.   247.     1.00
+          1.   58.   247.     1.00
+          1.   57.   247.     1.00
+          1.   56.   247.     1.00
+          1.   55.   247.     1.00
+          1.   54.   247.     1.00
+          1.   53.   247.     1.00
+          1.   52.   247.     1.00
+          1.   52.   246.     1.00
+          1.   51.   246.     1.00
+
+ GROUP NUMBER:     16    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:     39
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   147 no_dr15          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   84.   255.     0.00
+          1.   84.   255.     0.00
+          1.   84.   255.     1.00
+          1.   83.   255.     1.00
+          1.   82.   255.     1.00
+          1.   81.   255.     1.00
+          1.   80.   255.     1.00
+          1.   79.   255.     1.00
+          1.   78.   255.     1.00
+          1.   77.   255.     1.00
+          1.   76.   255.     1.00
+          1.   75.   255.     1.00
+          1.   74.   255.     1.00
+          1.   73.   255.     1.00
+          1.   72.   255.     1.00
+          1.   71.   255.     1.00
+          1.   70.   255.     1.00
+          1.   69.   255.     1.00
+          1.   68.   255.     1.00
+          1.   67.   255.     1.00
+          1.   66.   255.     1.00
+          1.   65.   255.     1.00
+          1.   64.   255.     1.00
+          1.   64.   256.     1.00
+          1.   64.   255.     1.00
+          1.   63.   255.     1.00
+          1.   62.   255.     1.00
+          1.   61.   255.     1.00
+          1.   60.   255.     1.00
+          1.   59.   255.     1.00
+          1.   58.   255.     1.00
+          1.   57.   255.     1.00
+          1.   57.   254.     1.00
+          1.   56.   254.     1.00
+          1.   55.   254.     1.00
+          1.   54.   254.     1.00
+          1.   53.   254.     1.00
+          1.   52.   254.     1.00
+          1.   51.   254.     1.00
+
+ GROUP NUMBER:     17    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:     12
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   148 no_dr16          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   90.   259.     0.00
+          1.   90.   259.     1.00
+          1.   90.   258.     1.00
+          1.   89.   258.     1.00
+          1.   88.   258.     1.00
+          1.   88.   257.     1.00
+          1.   87.   257.     1.00
+          1.   86.   257.     1.00
+          1.   85.   257.     1.00
+          1.   85.   256.     1.00
+          1.   85.   255.     1.00
+          1.   84.   255.     1.00
+
+ GROUP NUMBER:     18    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:      6
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   149 no_dr17          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   99.   253.     0.00
+          1.   99.   253.     1.00
+          1.   99.   254.     1.00
+          1.   98.   254.     1.00
+          1.   98.   255.     1.00
+          1.   97.   255.     1.00
+
+ GROUP NUMBER:     19    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:      8
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   150 no_dr18          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.  101.   257.     0.00
+          1.  101.   257.     1.00
+          1.  100.   257.     1.00
+          1.   99.   257.     1.00
+          1.   99.   256.     1.00
+          1.   98.   256.     1.00
+          1.   98.   255.     1.00
+          1.   97.   255.     1.00
+
+ GROUP NUMBER:     20    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:     14
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   151 no_dr19          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   97.   255.     0.00
+          1.   97.   255.     0.00
+          1.   97.   255.     0.00
+          1.   97.   255.     0.00
+          1.   97.   255.     0.00
+          1.   97.   255.     1.00
+          1.   96.   255.     1.00
+          1.   95.   255.     1.00
+          1.   94.   255.     1.00
+          1.   93.   255.     1.00
+          1.   92.   255.     1.00
+          1.   91.   255.     1.00
+          1.   90.   255.     1.00
+          1.   89.   255.     1.00
+
+ GROUP NUMBER:     21    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:     15
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   152 no_dr20          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   94.   251.     0.00
+          1.   94.   251.     1.00
+          1.   94.   252.     1.00
+          1.   95.   252.     1.00
+          1.   95.   253.     1.00
+          1.   96.   253.     1.00
+          1.   95.   253.     1.00
+          1.   95.   254.     1.00
+          1.   94.   254.     1.00
+          1.   94.   255.     1.00
+          1.   93.   255.     1.00
+          1.   92.   255.     1.00
+          1.   91.   255.     1.00
+          1.   90.   255.     1.00
+          1.   89.   255.     1.00
+
+ GROUP NUMBER:     22    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:     16
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   153 no_dr21          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   52.   287.     0.00
+          1.   52.   287.     0.00
+          1.   52.   287.     0.00
+          1.   52.   287.     1.00
+          1.   51.   287.     1.00
+          1.   50.   287.     1.00
+          1.   49.   287.     1.00
+          1.   49.   286.     1.00
+          1.   48.   286.     1.00
+          1.   47.   286.     1.00
+          1.   46.   286.     1.00
+          1.   46.   285.     1.00
+          1.   45.   285.     1.00
+          1.   44.   285.     1.00
+          1.   43.   285.     1.00
+          1.   43.   284.     1.00
+
+ GROUP NUMBER:     23    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:     27
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   154 no_dr22          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   64.   300.     0.00
+          1.   64.   300.     1.00
+          1.   63.   300.     1.00
+          1.   63.   299.     1.00
+          1.   62.   299.     1.00
+          1.   62.   298.     1.00
+          1.   61.   298.     1.00
+          1.   61.   297.     1.00
+          1.   60.   297.     1.00
+          1.   60.   296.     1.00
+          1.   59.   296.     1.00
+          1.   59.   295.     1.00
+          1.   59.   294.     1.00
+          1.   58.   294.     1.00
+          1.   58.   293.     1.00
+          1.   57.   293.     1.00
+          1.   57.   292.     1.00
+          1.   56.   292.     1.00
+          1.   56.   291.     1.00
+          1.   55.   291.     1.00
+          1.   55.   290.     1.00
+          1.   54.   290.     1.00
+          1.   54.   289.     1.00
+          1.   53.   289.     1.00
+          1.   53.   288.     1.00
+          1.   52.   288.     1.00
+          1.   52.   287.     1.00
+
+ GROUP NUMBER:     24    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:    101
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   155 no_dr23          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.  103.   265.     0.00
+          1.  103.   265.     1.00
+          1.  103.   266.     1.00
+          1.  103.   267.     1.00
+          1.  103.   268.     1.00
+          1.  103.   269.     1.00
+          1.  103.   270.     1.00
+          1.  103.   271.     1.00
+          1.  103.   272.     1.00
+          1.  103.   273.     1.00
+          1.  103.   274.     1.00
+          1.  103.   275.     1.00
+          1.  103.   276.     1.00
+          1.  102.   276.     1.00
+          1.  102.   277.     1.00
+          1.  102.   278.     1.00
+          1.  102.   279.     1.00
+          1.  102.   280.     1.00
+          1.  101.   280.     1.00
+          1.  101.   281.     1.00
+          1.  101.   282.     1.00
+          1.  101.   283.     1.00
+          1.  101.   284.     1.00
+          1.  100.   284.     1.00
+          1.  100.   285.     1.00
+          1.  100.   286.     1.00
+          1.   99.   286.     1.00
+          1.   98.   286.     1.00
+          1.   97.   286.     1.00
+          1.   96.   286.     1.00
+          1.   95.   286.     1.00
+          1.   95.   285.     1.00
+          1.   95.   284.     1.00
+          1.   94.   284.     1.00
+          1.   94.   283.     1.00
+          1.   93.   283.     1.00
+          1.   93.   282.     1.00
+          1.   92.   282.     1.00
+          1.   92.   281.     1.00
+          1.   92.   280.     1.00
+          1.   91.   280.     1.00
+          1.   91.   279.     1.00
+          1.   90.   279.     1.00
+          1.   90.   278.     1.00
+          1.   89.   278.     1.00
+          1.   88.   278.     1.00
+          1.   88.   277.     1.00
+          1.   87.   277.     1.00
+          1.   86.   277.     1.00
+          1.   86.   276.     1.00
+          1.   85.   276.     1.00
+          1.   84.   276.     1.00
+          1.   83.   276.     1.00
+          1.   83.   275.     1.00
+          1.   82.   275.     1.00
+          1.   81.   275.     1.00
+          1.   80.   275.     1.00
+          1.   79.   275.     1.00
+          1.   78.   275.     1.00
+          1.   77.   275.     1.00
+          1.   76.   275.     1.00
+          1.   75.   275.     1.00
+          1.   74.   275.     1.00
+          1.   74.   274.     1.00
+          1.   73.   274.     1.00
+          1.   72.   274.     1.00
+          1.   71.   274.     1.00
+          1.   70.   274.     1.00
+          1.   69.   274.     1.00
+          1.   68.   274.     1.00
+          1.   67.   274.     1.00
+          1.   66.   274.     1.00
+          1.   65.   274.     1.00
+          1.   65.   273.     1.00
+          1.   65.   274.     1.00
+          1.   64.   274.     1.00
+          1.   63.   274.     1.00
+          1.   62.   274.     1.00
+          1.   62.   275.     1.00
+          1.   61.   275.     1.00
+          1.   60.   275.     1.00
+          1.   60.   276.     1.00
+          1.   59.   276.     1.00
+          1.   58.   276.     1.00
+          1.   58.   277.     1.00
+          1.   57.   277.     1.00
+          1.   57.   278.     1.00
+          1.   56.   278.     1.00
+          1.   56.   279.     1.00
+          1.   55.   279.     1.00
+          1.   55.   280.     1.00
+          1.   54.   280.     1.00
+          1.   54.   281.     1.00
+          1.   53.   281.     1.00
+          1.   53.   282.     1.00
+          1.   53.   283.     1.00
+          1.   53.   284.     1.00
+          1.   52.   284.     1.00
+          1.   52.   285.     1.00
+          1.   52.   286.     1.00
+          1.   52.   287.     1.00
+
+ GROUP NUMBER:     25    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:     24
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   156 no_dr24          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.  105.   303.     0.00
+          1.  105.   303.     1.00
+          1.  105.   302.     1.00
+          1.  105.   301.     1.00
+          1.  105.   300.     1.00
+          1.  104.   300.     1.00
+          1.  104.   299.     1.00
+          1.  104.   298.     1.00
+          1.  104.   297.     1.00
+          1.  104.   296.     1.00
+          1.  104.   295.     1.00
+          1.  104.   294.     1.00
+          1.  104.   293.     1.00
+          1.  104.   292.     1.00
+          1.  104.   291.     1.00
+          1.  103.   291.     1.00
+          1.  103.   290.     1.00
+          1.  103.   289.     1.00
+          1.  103.   288.     1.00
+          1.  102.   288.     1.00
+          1.  102.   287.     1.00
+          1.  101.   287.     1.00
+          1.  100.   287.     1.00
+          1.  100.   286.     1.00
+
+ GROUP NUMBER:     26    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:     34
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   157 no_dr25          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   57.   326.     0.00
+          1.   57.   326.     1.00
+          1.   57.   327.     1.00
+          1.   57.   328.     1.00
+          1.   57.   329.     1.00
+          1.   57.   330.     1.00
+          1.   57.   331.     1.00
+          1.   58.   331.     1.00
+          1.   58.   332.     1.00
+          1.   57.   332.     1.00
+          1.   57.   333.     1.00
+          1.   57.   334.     1.00
+          1.   57.   335.     1.00
+          1.   57.   336.     1.00
+          1.   57.   337.     1.00
+          1.   56.   337.     1.00
+          1.   56.   338.     1.00
+          1.   56.   339.     1.00
+          1.   56.   340.     1.00
+          1.   55.   340.     1.00
+          1.   55.   341.     1.00
+          1.   55.   342.     1.00
+          1.   55.   343.     1.00
+          1.   55.   344.     1.00
+          1.   54.   344.     1.00
+          1.   54.   345.     1.00
+          1.   54.   346.     1.00
+          1.   54.   347.     1.00
+          1.   53.   347.     1.00
+          1.   53.   348.     1.00
+          1.   53.   349.     1.00
+          1.   52.   349.     1.00
+          1.   52.   350.     1.00
+          1.   51.   350.     1.00
+
+ GROUP NUMBER:     27    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:     31
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   158 no_dr26          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   60.   201.     0.00
+          1.   60.   201.     1.00
+          1.   59.   201.     1.00
+          1.   58.   201.     1.00
+          1.   57.   201.     1.00
+          1.   57.   202.     1.00
+          1.   56.   202.     1.00
+          1.   55.   202.     1.00
+          1.   54.   202.     1.00
+          1.   53.   202.     1.00
+          1.   52.   202.     1.00
+          1.   51.   202.     1.00
+          1.   51.   203.     1.00
+          1.   50.   203.     1.00
+          1.   49.   203.     1.00
+          1.   48.   203.     1.00
+          1.   47.   203.     1.00
+          1.   46.   203.     1.00
+          1.   46.   204.     1.00
+          1.   45.   204.     1.00
+          1.   44.   204.     1.00
+          1.   43.   204.     1.00
+          1.   43.   205.     1.00
+          1.   42.   205.     1.00
+          1.   41.   205.     1.00
+          1.   40.   205.     1.00
+          1.   40.   206.     1.00
+          1.   39.   206.     1.00
+          1.   38.   206.     1.00
+          1.   37.   206.     1.00
+          1.   37.   207.     1.00
+
+ GROUP NUMBER:     28    BOUNDARY TYPE: DRN    NUMBER OF CELLS IN GROUP:     57
+ NUMBER OF FLOW OBSERVATIONS:      1
+
+                    REFER.              OBSERVED
+       OBSERVATION  STRESS    TIME     DRAIN FLOW               STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     GAIN (-)    STATISTIC     TYPE      SYM.
+   159 no_dr27          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   85.   240.     0.00
+          1.   85.   240.     1.00
+          1.   84.   240.     1.00
+          1.   83.   240.     1.00
+          1.   82.   240.     1.00
+          1.   81.   240.     1.00
+          1.   81.   239.     1.00
+          1.   80.   239.     1.00
+          1.   79.   239.     1.00
+          1.   78.   239.     1.00
+          1.   77.   239.     1.00
+          1.   76.   239.     1.00
+          1.   75.   239.     1.00
+          1.   74.   239.     1.00
+          1.   74.   238.     1.00
+          1.   73.   238.     1.00
+          1.   72.   238.     1.00
+          1.   71.   238.     1.00
+          1.   70.   238.     1.00
+          1.   69.   238.     1.00
+          1.   69.   237.     1.00
+          1.   68.   237.     1.00
+          1.   67.   237.     1.00
+          1.   66.   237.     1.00
+          1.   65.   237.     1.00
+          1.   64.   237.     1.00
+          1.   63.   237.     1.00
+          1.   62.   237.     1.00
+          1.   61.   237.     1.00
+          1.   60.   237.     1.00
+          1.   59.   237.     1.00
+          1.   59.   236.     1.00
+          1.   58.   236.     1.00
+          1.   57.   236.     1.00
+          1.   57.   235.     1.00
+          1.   56.   235.     1.00
+          1.   56.   234.     1.00
+          1.   55.   234.     1.00
+          1.   54.   234.     1.00
+          1.   54.   233.     1.00
+          1.   53.   233.     1.00
+          1.   52.   233.     1.00
+          1.   51.   233.     1.00
+          1.   51.   232.     1.00
+          1.   50.   232.     1.00
+          1.   49.   232.     1.00
+          1.   48.   232.     1.00
+          1.   47.   232.     1.00
+          1.   47.   231.     1.00
+          1.   46.   231.     1.00
+          1.   45.   231.     1.00
+          1.   44.   231.     1.00
+          1.   43.   231.     1.00
+          1.   43.   230.     1.00
+          1.   42.   230.     1.00
+          1.   41.   230.     1.00
+          1.   40.   230.     1.00
+
+ CONSTANT-HEAD-CELL FLOW OBSERVATION VARIANCES ARE MULTIPLIED BY:       1.000    
+
+ OBSERVED CONSTANT-HEAD-CELL FLOW DATA
+ -- TIME OFFSETS ARE MULTIPLIED BY:   1.0000    
+
+   GROUP NUMBER:  29   BOUNDARY TYPE: CHD   NUMBER OF CELLS IN GROUP:   162
+   NUMBER OF FLOW OBSERVATIONS:     1
+
+                                        OBSERVED
+                    REFER.            BOUNDARY FLOW
+       OBSERVATION  STRESS    TIME     GAIN (-) OR              STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     LOSS (+)    STATISTIC     TYPE      SYM.
+   160 no_ch0           1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.  112.     5.     1.00
+          1.  111.     5.     1.00
+          1.  111.     6.     1.00
+          1.  110.     6.     1.00
+          1.  109.     6.     1.00
+          1.  109.     7.     1.00
+          1.  108.     7.     1.00
+          1.  108.     8.     1.00
+          1.  107.     8.     1.00
+          1.  106.     8.     1.00
+          1.  105.     8.     1.00
+          1.  105.     9.     1.00
+          1.  104.     9.     1.00
+          1.  104.     8.     1.00
+          1.  103.     8.     1.00
+          1.  103.     9.     1.00
+          1.  102.     9.     1.00
+          1.  101.     9.     1.00
+          1.  100.     9.     1.00
+          1.  100.    10.     1.00
+          1.   99.    10.     1.00
+          1.   98.    10.     1.00
+          1.   98.    11.     1.00
+          1.   97.    11.     1.00
+          1.   96.    11.     1.00
+          1.   95.    11.     1.00
+          1.   95.    12.     1.00
+          1.   94.    12.     1.00
+          1.   93.    12.     1.00
+          1.   92.    12.     1.00
+          1.   91.    12.     1.00
+          1.   90.    12.     1.00
+          1.   89.    12.     1.00
+          1.   88.    12.     1.00
+          1.   87.    12.     1.00
+          1.   86.    12.     1.00
+          1.   85.    12.     1.00
+          1.   84.    12.     1.00
+          1.   84.    13.     1.00
+          1.   83.    13.     1.00
+          1.   82.    13.     1.00
+          1.   81.    13.     1.00
+          1.   80.    13.     1.00
+          1.   79.    13.     1.00
+          1.   78.    13.     1.00
+          1.   77.    13.     1.00
+          1.   76.    13.     1.00
+          1.   75.    13.     1.00
+          1.   75.    14.     1.00
+          1.   74.    14.     1.00
+          1.   73.    14.     1.00
+          1.   72.    14.     1.00
+          1.   71.    14.     1.00
+          1.   70.    14.     1.00
+          1.   69.    14.     1.00
+          1.   68.    14.     1.00
+          1.   67.    14.     1.00
+          1.   67.    15.     1.00
+          1.   66.    15.     1.00
+          1.   65.    15.     1.00
+          1.   64.    15.     1.00
+          1.   63.    15.     1.00
+          1.   63.    16.     1.00
+          1.   62.    16.     1.00
+          1.   61.    16.     1.00
+          1.   60.    16.     1.00
+          1.   60.    17.     1.00
+          1.   59.    17.     1.00
+          1.   59.    18.     1.00
+          1.   58.    18.     1.00
+          1.   58.    19.     1.00
+          1.   57.    19.     1.00
+          1.   56.    19.     1.00
+          1.   56.    20.     1.00
+          1.   55.    20.     1.00
+          1.   54.    20.     1.00
+          1.   53.    20.     1.00
+          1.   53.    21.     1.00
+          1.   52.    21.     1.00
+          1.   51.    21.     1.00
+          1.   50.    21.     1.00
+          1.   49.    21.     1.00
+          1.   48.    21.     1.00
+          1.   48.    22.     1.00
+          1.   47.    22.     1.00
+          1.   46.    22.     1.00
+          1.   45.    22.     1.00
+          1.   44.    22.     1.00
+          1.   44.    23.     1.00
+          1.   43.    23.     1.00
+          1.   42.    23.     1.00
+          1.   41.    23.     1.00
+          1.   40.    23.     1.00
+          1.   40.    24.     1.00
+          1.   39.    24.     1.00
+          1.   38.    24.     1.00
+          1.   37.    24.     1.00
+          1.   37.    25.     1.00
+          1.   36.    25.     1.00
+          1.   35.    25.     1.00
+          1.   34.    25.     1.00
+          1.   33.    25.     1.00
+          1.   32.    25.     1.00
+          1.   31.    25.     1.00
+          1.   30.    25.     1.00
+          1.   29.    25.     1.00
+          1.   28.    25.     1.00
+          1.   27.    25.     1.00
+          1.   26.    25.     1.00
+          1.   25.    25.     1.00
+          1.   24.    25.     1.00
+          1.   23.    25.     1.00
+          1.   23.    26.     1.00
+          1.   22.    26.     1.00
+          1.   21.    26.     1.00
+          1.   20.    26.     1.00
+          1.   19.    26.     1.00
+          1.   18.    26.     1.00
+          1.   17.    26.     1.00
+          1.   16.    26.     1.00
+          1.   15.    26.     1.00
+          1.   14.    26.     1.00
+          1.   13.    26.     1.00
+          1.   12.    26.     1.00
+          1.   11.    26.     1.00
+          1.   11.    25.     1.00
+          1.   10.    25.     1.00
+          1.    9.    25.     1.00
+          1.    9.    24.     1.00
+          1.    8.    24.     1.00
+          1.    8.    23.     1.00
+          1.    7.    23.     1.00
+          1.    7.    22.     1.00
+          1.    6.    22.     1.00
+          1.    6.    23.     1.00
+          1.    5.    23.     1.00
+          1.    5.    24.     1.00
+          1.    5.    25.     1.00
+          1.    5.    26.     1.00
+          1.    5.    27.     1.00
+          1.    6.    27.     1.00
+          1.    6.    28.     1.00
+          1.    6.    29.     1.00
+          1.    6.    30.     1.00
+          1.    7.    30.     1.00
+          1.    7.    31.     1.00
+          1.    7.    32.     1.00
+          1.    7.    33.     1.00
+          1.    7.    34.     1.00
+          1.    7.    35.     1.00
+          1.    7.    36.     1.00
+          1.    7.    37.     1.00
+          1.    6.    37.     1.00
+          1.    6.    38.     1.00
+          1.    6.    39.     1.00
+          1.    6.    40.     1.00
+          1.    7.    40.     1.00
+          1.    7.    41.     1.00
+          1.    7.    42.     1.00
+          1.    7.    43.     1.00
+          1.    8.    43.     1.00
+          1.    8.    44.     1.00
+
+   GROUP NUMBER:  30   BOUNDARY TYPE: CHD   NUMBER OF CELLS IN GROUP:    59
+   NUMBER OF FLOW OBSERVATIONS:     1
+
+                                        OBSERVED
+                    REFER.            BOUNDARY FLOW
+       OBSERVATION  STRESS    TIME     GAIN (-) OR              STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     LOSS (+)    STATISTIC     TYPE      SYM.
+   161 no_ch1           1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   50.   254.     1.00
+          1.   49.   254.     1.00
+          1.   48.   254.     1.00
+          1.   47.   254.     1.00
+          1.   46.   254.     1.00
+          1.   45.   254.     1.00
+          1.   45.   255.     1.00
+          1.   44.   255.     1.00
+          1.   43.   255.     1.00
+          1.   43.   256.     1.00
+          1.   44.   256.     1.00
+          1.   45.   256.     1.00
+          1.   45.   257.     1.00
+          1.   46.   257.     1.00
+          1.   47.   257.     1.00
+          1.   48.   257.     1.00
+          1.   48.   258.     1.00
+          1.   49.   258.     1.00
+          1.   50.   258.     1.00
+          1.   50.   259.     1.00
+          1.   50.   260.     1.00
+          1.   49.   260.     1.00
+          1.   48.   260.     1.00
+          1.   48.   261.     1.00
+          1.   47.   261.     1.00
+          1.   47.   262.     1.00
+          1.   47.   263.     1.00
+          1.   47.   264.     1.00
+          1.   46.   264.     1.00
+          1.   45.   264.     1.00
+          1.   45.   265.     1.00
+          1.   44.   265.     1.00
+          1.   43.   265.     1.00
+          1.   43.   266.     1.00
+          1.   42.   266.     1.00
+          1.   42.   267.     1.00
+          1.   42.   268.     1.00
+          1.   42.   269.     1.00
+          1.   43.   269.     1.00
+          1.   43.   270.     1.00
+          1.   44.   270.     1.00
+          1.   44.   271.     1.00
+          1.   44.   272.     1.00
+          1.   45.   272.     1.00
+          1.   45.   273.     1.00
+          1.   45.   274.     1.00
+          1.   45.   275.     1.00
+          1.   45.   276.     1.00
+          1.   45.   277.     1.00
+          1.   45.   278.     1.00
+          1.   44.   278.     1.00
+          1.   44.   279.     1.00
+          1.   44.   280.     1.00
+          1.   43.   280.     1.00
+          1.   43.   281.     1.00
+          1.   43.   282.     1.00
+          1.   42.   282.     1.00
+          1.   42.   283.     1.00
+          1.   42.   284.     1.00
+
+   GROUP NUMBER:  31   BOUNDARY TYPE: CHD   NUMBER OF CELLS IN GROUP:   127
+   NUMBER OF FLOW OBSERVATIONS:     1
+
+                                        OBSERVED
+                    REFER.            BOUNDARY FLOW
+       OBSERVATION  STRESS    TIME     GAIN (-) OR              STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     LOSS (+)    STATISTIC     TYPE      SYM.
+   162 no_ch2           1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   42.   284.     1.00
+          1.   41.   284.     1.00
+          1.   41.   285.     1.00
+          1.   41.   286.     1.00
+          1.   41.   287.     1.00
+          1.   40.   287.     1.00
+          1.   40.   288.     1.00
+          1.   40.   289.     1.00
+          1.   40.   290.     1.00
+          1.   39.   290.     1.00
+          1.   39.   291.     1.00
+          1.   39.   292.     1.00
+          1.   39.   293.     1.00
+          1.   38.   293.     1.00
+          1.   38.   294.     1.00
+          1.   38.   295.     1.00
+          1.   38.   296.     1.00
+          1.   37.   296.     1.00
+          1.   37.   297.     1.00
+          1.   37.   298.     1.00
+          1.   36.   298.     1.00
+          1.   36.   299.     1.00
+          1.   36.   300.     1.00
+          1.   35.   300.     1.00
+          1.   35.   301.     1.00
+          1.   35.   302.     1.00
+          1.   35.   303.     1.00
+          1.   34.   303.     1.00
+          1.   34.   304.     1.00
+          1.   34.   305.     1.00
+          1.   34.   306.     1.00
+          1.   33.   306.     1.00
+          1.   33.   307.     1.00
+          1.   33.   308.     1.00
+          1.   32.   308.     1.00
+          1.   32.   309.     1.00
+          1.   31.   309.     1.00
+          1.   31.   310.     1.00
+          1.   30.   310.     1.00
+          1.   30.   311.     1.00
+          1.   29.   311.     1.00
+          1.   31.   311.     1.00
+          1.   31.   312.     1.00
+          1.   32.   312.     1.00
+          1.   33.   312.     1.00
+          1.   34.   312.     1.00
+          1.   34.   313.     1.00
+          1.   35.   313.     1.00
+          1.   36.   313.     1.00
+          1.   37.   313.     1.00
+          1.   38.   313.     1.00
+          1.   38.   314.     1.00
+          1.   39.   314.     1.00
+          1.   39.   315.     1.00
+          1.   39.   316.     1.00
+          1.   38.   316.     1.00
+          1.   37.   316.     1.00
+          1.   37.   317.     1.00
+          1.   36.   317.     1.00
+          1.   35.   317.     1.00
+          1.   34.   317.     1.00
+          1.   33.   317.     1.00
+          1.   33.   318.     1.00
+          1.   32.   318.     1.00
+          1.   31.   318.     1.00
+          1.   31.   319.     1.00
+          1.   31.   320.     1.00
+          1.   30.   320.     1.00
+          1.   30.   321.     1.00
+          1.   30.   322.     1.00
+          1.   29.   322.     1.00
+          1.   29.   323.     1.00
+          1.   28.   323.     1.00
+          1.   27.   323.     1.00
+          1.   27.   324.     1.00
+          1.   27.   325.     1.00
+          1.   26.   325.     1.00
+          1.   27.   326.     1.00
+          1.   28.   326.     1.00
+          1.   28.   327.     1.00
+          1.   28.   328.     1.00
+          1.   28.   329.     1.00
+          1.   28.   330.     1.00
+          1.   28.   331.     1.00
+          1.   28.   332.     1.00
+          1.   29.   332.     1.00
+          1.   29.   333.     1.00
+          1.   29.   334.     1.00
+          1.   29.   335.     1.00
+          1.   29.   336.     1.00
+          1.   29.   337.     1.00
+          1.   30.   337.     1.00
+          1.   30.   338.     1.00
+          1.   30.   339.     1.00
+          1.   30.   340.     1.00
+          1.   30.   341.     1.00
+          1.   31.   341.     1.00
+          1.   31.   342.     1.00
+          1.   31.   343.     1.00
+          1.   31.   344.     1.00
+          1.   32.   344.     1.00
+          1.   32.   345.     1.00
+          1.   32.   346.     1.00
+          1.   33.   346.     1.00
+          1.   33.   347.     1.00
+          1.   34.   347.     1.00
+          1.   34.   348.     1.00
+          1.   35.   348.     1.00
+          1.   35.   349.     1.00
+          1.   36.   349.     1.00
+          1.   37.   349.     1.00
+          1.   37.   350.     1.00
+          1.   38.   350.     1.00
+          1.   39.   350.     1.00
+          1.   40.   350.     1.00
+          1.   41.   350.     1.00
+          1.   42.   350.     1.00
+          1.   43.   350.     1.00
+          1.   44.   350.     1.00
+          1.   45.   350.     1.00
+          1.   46.   350.     1.00
+          1.   47.   350.     1.00
+          1.   47.   351.     1.00
+          1.   48.   351.     1.00
+          1.   49.   351.     1.00
+          1.   50.   351.     1.00
+          1.   51.   351.     1.00
+
+   GROUP NUMBER:  32   BOUNDARY TYPE: CHD   NUMBER OF CELLS IN GROUP:   216
+   NUMBER OF FLOW OBSERVATIONS:     1
+
+                                        OBSERVED
+                    REFER.            BOUNDARY FLOW
+       OBSERVATION  STRESS    TIME     GAIN (-) OR              STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     LOSS (+)    STATISTIC     TYPE      SYM.
+   163 no_ch3           1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   13.    59.     1.00
+          1.   14.    59.     1.00
+          1.   14.    60.     1.00
+          1.   14.    61.     1.00
+          1.   14.    62.     1.00
+          1.   14.    63.     1.00
+          1.   13.    63.     1.00
+          1.   13.    64.     1.00
+          1.   13.    65.     1.00
+          1.   13.    66.     1.00
+          1.   13.    67.     1.00
+          1.   13.    68.     1.00
+          1.   13.    69.     1.00
+          1.   14.    69.     1.00
+          1.   14.    70.     1.00
+          1.   14.    71.     1.00
+          1.   14.    72.     1.00
+          1.   14.    73.     1.00
+          1.   15.    73.     1.00
+          1.   15.    74.     1.00
+          1.   15.    75.     1.00
+          1.   15.    76.     1.00
+          1.   15.    77.     1.00
+          1.   15.    78.     1.00
+          1.   15.    79.     1.00
+          1.   15.    80.     1.00
+          1.   15.    81.     1.00
+          1.   15.    82.     1.00
+          1.   16.    82.     1.00
+          1.   16.    83.     1.00
+          1.   17.    83.     1.00
+          1.   17.    84.     1.00
+          1.   17.    85.     1.00
+          1.   17.    86.     1.00
+          1.   18.    86.     1.00
+          1.   18.    87.     1.00
+          1.   18.    88.     1.00
+          1.   18.    89.     1.00
+          1.   18.    90.     1.00
+          1.   19.    90.     1.00
+          1.   19.    91.     1.00
+          1.   20.    91.     1.00
+          1.   20.    92.     1.00
+          1.   20.    93.     1.00
+          1.   20.    94.     1.00
+          1.   20.    95.     1.00
+          1.   19.    95.     1.00
+          1.   19.    96.     1.00
+          1.   19.    97.     1.00
+          1.   18.    97.     1.00
+          1.   18.    98.     1.00
+          1.   18.    99.     1.00
+          1.   18.   100.     1.00
+          1.   18.   101.     1.00
+          1.   19.   101.     1.00
+          1.   19.   102.     1.00
+          1.   19.   103.     1.00
+          1.   19.   104.     1.00
+          1.   19.   105.     1.00
+          1.   19.   106.     1.00
+          1.   20.   106.     1.00
+          1.   20.   107.     1.00
+          1.   20.   108.     1.00
+          1.   20.   109.     1.00
+          1.   20.   110.     1.00
+          1.   20.   111.     1.00
+          1.   20.   112.     1.00
+          1.   20.   113.     1.00
+          1.   21.   113.     1.00
+          1.   21.   114.     1.00
+          1.   21.   115.     1.00
+          1.   21.   116.     1.00
+          1.   21.   117.     1.00
+          1.   21.   118.     1.00
+          1.   21.   119.     1.00
+          1.   21.   120.     1.00
+          1.   21.   121.     1.00
+          1.   21.   122.     1.00
+          1.   21.   123.     1.00
+          1.   21.   124.     1.00
+          1.   21.   125.     1.00
+          1.   21.   126.     1.00
+          1.   21.   127.     1.00
+          1.   21.   128.     1.00
+          1.   21.   129.     1.00
+          1.   21.   130.     1.00
+          1.   21.   131.     1.00
+          1.   22.   131.     1.00
+          1.   22.   132.     1.00
+          1.   22.   133.     1.00
+          1.   22.   134.     1.00
+          1.   22.   135.     1.00
+          1.   22.   136.     1.00
+          1.   23.   136.     1.00
+          1.   23.   137.     1.00
+          1.   23.   138.     1.00
+          1.   23.   139.     1.00
+          1.   23.   140.     1.00
+          1.   24.   140.     1.00
+          1.   24.   141.     1.00
+          1.   25.   141.     1.00
+          1.   25.   142.     1.00
+          1.   25.   143.     1.00
+          1.   25.   144.     1.00
+          1.   26.   144.     1.00
+          1.   26.   145.     1.00
+          1.   26.   146.     1.00
+          1.   26.   147.     1.00
+          1.   26.   148.     1.00
+          1.   25.   148.     1.00
+          1.   25.   149.     1.00
+          1.   25.   150.     1.00
+          1.   25.   151.     1.00
+          1.   25.   152.     1.00
+          1.   25.   153.     1.00
+          1.   24.   153.     1.00
+          1.   24.   154.     1.00
+          1.   24.   155.     1.00
+          1.   24.   156.     1.00
+          1.   24.   157.     1.00
+          1.   23.   157.     1.00
+          1.   23.   158.     1.00
+          1.   23.   159.     1.00
+          1.   22.   159.     1.00
+          1.   22.   160.     1.00
+          1.   22.   161.     1.00
+          1.   21.   161.     1.00
+          1.   21.   162.     1.00
+          1.   20.   162.     1.00
+          1.   20.   163.     1.00
+          1.   19.   163.     1.00
+          1.   18.   163.     1.00
+          1.   17.   163.     1.00
+          1.   17.   164.     1.00
+          1.   16.   164.     1.00
+          1.   15.   164.     1.00
+          1.   14.   164.     1.00
+          1.   14.   165.     1.00
+          1.   13.   165.     1.00
+          1.   13.   166.     1.00
+          1.   12.   166.     1.00
+          1.   12.   167.     1.00
+          1.   11.   167.     1.00
+          1.   10.   167.     1.00
+          1.    9.   167.     1.00
+          1.    9.   168.     1.00
+          1.    8.   168.     1.00
+          1.    8.   169.     1.00
+          1.    8.   170.     1.00
+          1.    7.   170.     1.00
+          1.    7.   171.     1.00
+          1.    7.   172.     1.00
+          1.    7.   173.     1.00
+          1.    7.   174.     1.00
+          1.    7.   175.     1.00
+          1.    7.   176.     1.00
+          1.    7.   177.     1.00
+          1.    7.   178.     1.00
+          1.    7.   179.     1.00
+          1.    7.   180.     1.00
+          1.    7.   181.     1.00
+          1.    8.   181.     1.00
+          1.    8.   182.     1.00
+          1.    8.   183.     1.00
+          1.    8.   184.     1.00
+          1.    8.   185.     1.00
+          1.    8.   186.     1.00
+          1.    8.   187.     1.00
+          1.    9.   187.     1.00
+          1.    9.   188.     1.00
+          1.    9.   189.     1.00
+          1.    9.   190.     1.00
+          1.    9.   191.     1.00
+          1.   10.   191.     1.00
+          1.   10.   192.     1.00
+          1.   11.   192.     1.00
+          1.   12.   192.     1.00
+          1.   12.   193.     1.00
+          1.   13.   193.     1.00
+          1.   13.   194.     1.00
+          1.   13.   195.     1.00
+          1.   14.   195.     1.00
+          1.   14.   196.     1.00
+          1.   15.   196.     1.00
+          1.   15.   197.     1.00
+          1.   16.   197.     1.00
+          1.   16.   198.     1.00
+          1.   17.   198.     1.00
+          1.   17.   199.     1.00
+          1.   18.   199.     1.00
+          1.   19.   199.     1.00
+          1.   19.   200.     1.00
+          1.   20.   200.     1.00
+          1.   21.   200.     1.00
+          1.   22.   200.     1.00
+          1.   23.   200.     1.00
+          1.   24.   200.     1.00
+          1.   25.   200.     1.00
+          1.   25.   201.     1.00
+          1.   26.   201.     1.00
+          1.   27.   201.     1.00
+          1.   27.   202.     1.00
+          1.   28.   202.     1.00
+          1.   28.   203.     1.00
+          1.   29.   203.     1.00
+          1.   29.   204.     1.00
+          1.   30.   204.     1.00
+          1.   31.   204.     1.00
+          1.   31.   205.     1.00
+          1.   32.   205.     1.00
+          1.   33.   205.     1.00
+          1.   33.   206.     1.00
+          1.   34.   206.     1.00
+          1.   35.   206.     1.00
+          1.   35.   207.     1.00
+          1.   36.   207.     1.00
+
+   GROUP NUMBER:  33   BOUNDARY TYPE: CHD   NUMBER OF CELLS IN GROUP:   495
+   NUMBER OF FLOW OBSERVATIONS:     1
+
+                                        OBSERVED
+                    REFER.            BOUNDARY FLOW
+       OBSERVATION  STRESS    TIME     GAIN (-) OR              STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     LOSS (+)    STATISTIC     TYPE      SYM.
+   164 no_ch4           1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   51.   351.     1.00
+          1.   51.   352.     1.00
+          1.   52.   352.     1.00
+          1.   52.   353.     1.00
+          1.   52.   354.     1.00
+          1.   53.   354.     1.00
+          1.   53.   355.     1.00
+          1.   53.   356.     1.00
+          1.   53.   357.     1.00
+          1.   53.   358.     1.00
+          1.   53.   359.     1.00
+          1.   52.   359.     1.00
+          1.   52.   360.     1.00
+          1.   51.   360.     1.00
+          1.   51.   361.     1.00
+          1.   50.   361.     1.00
+          1.   50.   362.     1.00
+          1.   50.   363.     1.00
+          1.   51.   363.     1.00
+          1.   51.   364.     1.00
+          1.   52.   364.     1.00
+          1.   53.   364.     1.00
+          1.   54.   364.     1.00
+          1.   55.   364.     1.00
+          1.   56.   364.     1.00
+          1.   57.   364.     1.00
+          1.   58.   364.     1.00
+          1.   59.   364.     1.00
+          1.   60.   364.     1.00
+          1.   61.   364.     1.00
+          1.   62.   364.     1.00
+          1.   63.   364.     1.00
+          1.   64.   364.     1.00
+          1.   65.   364.     1.00
+          1.   66.   364.     1.00
+          1.   67.   364.     1.00
+          1.   68.   364.     1.00
+          1.   69.   364.     1.00
+          1.   69.   363.     1.00
+          1.   70.   363.     1.00
+          1.   71.   363.     1.00
+          1.   72.   363.     1.00
+          1.   73.   363.     1.00
+          1.   74.   363.     1.00
+          1.   75.   363.     1.00
+          1.   76.   363.     1.00
+          1.   77.   363.     1.00
+          1.   78.   363.     1.00
+          1.   79.   363.     1.00
+          1.   80.   363.     1.00
+          1.   81.   363.     1.00
+          1.   81.   362.     1.00
+          1.   82.   362.     1.00
+          1.   83.   362.     1.00
+          1.   84.   362.     1.00
+          1.   85.   362.     1.00
+          1.   86.   362.     1.00
+          1.   87.   362.     1.00
+          1.   88.   362.     1.00
+          1.   89.   362.     1.00
+          1.   90.   362.     1.00
+          1.   90.   361.     1.00
+          1.   91.   361.     1.00
+          1.   92.   361.     1.00
+          1.   93.   361.     1.00
+          1.   94.   361.     1.00
+          1.   94.   360.     1.00
+          1.   95.   360.     1.00
+          1.   96.   360.     1.00
+          1.   97.   360.     1.00
+          1.   97.   359.     1.00
+          1.   98.   359.     1.00
+          1.   98.   358.     1.00
+          1.   99.   358.     1.00
+          1.   99.   357.     1.00
+          1.  100.   357.     1.00
+          1.  100.   356.     1.00
+          1.  101.   356.     1.00
+          1.  101.   355.     1.00
+          1.  102.   355.     1.00
+          1.  102.   354.     1.00
+          1.  103.   354.     1.00
+          1.  103.   353.     1.00
+          1.  103.   352.     1.00
+          1.  104.   352.     1.00
+          1.  104.   351.     1.00
+          1.  104.   350.     1.00
+          1.  104.   349.     1.00
+          1.  105.   349.     1.00
+          1.  105.   348.     1.00
+          1.  105.   347.     1.00
+          1.  105.   346.     1.00
+          1.  105.   345.     1.00
+          1.  105.   344.     1.00
+          1.  105.   343.     1.00
+          1.  106.   343.     1.00
+          1.  106.   342.     1.00
+          1.  106.   341.     1.00
+          1.  106.   340.     1.00
+          1.  106.   339.     1.00
+          1.  107.   339.     1.00
+          1.  107.   338.     1.00
+          1.  107.   337.     1.00
+          1.  108.   337.     1.00
+          1.  108.   336.     1.00
+          1.  108.   335.     1.00
+          1.  108.   334.     1.00
+          1.  109.   334.     1.00
+          1.  109.   333.     1.00
+          1.  109.   332.     1.00
+          1.  110.   332.     1.00
+          1.  110.   331.     1.00
+          1.  110.   330.     1.00
+          1.  111.   330.     1.00
+          1.  111.   329.     1.00
+          1.  111.   328.     1.00
+          1.  112.   328.     1.00
+          1.  112.   327.     1.00
+          1.  113.   327.     1.00
+          1.  113.   326.     1.00
+          1.  113.   325.     1.00
+          1.  114.   325.     1.00
+          1.  114.   324.     1.00
+          1.  115.   324.     1.00
+          1.  115.   323.     1.00
+          1.  116.   323.     1.00
+          1.  116.   322.     1.00
+          1.  117.   322.     1.00
+          1.  117.   321.     1.00
+          1.  118.   321.     1.00
+          1.  118.   320.     1.00
+          1.  118.   319.     1.00
+          1.  119.   319.     1.00
+          1.  119.   318.     1.00
+          1.  120.   318.     1.00
+          1.  121.   318.     1.00
+          1.  121.   317.     1.00
+          1.  122.   317.     1.00
+          1.  123.   317.     1.00
+          1.  124.   317.     1.00
+          1.  124.   316.     1.00
+          1.  125.   316.     1.00
+          1.  126.   316.     1.00
+          1.  126.   315.     1.00
+          1.  127.   315.     1.00
+          1.  128.   315.     1.00
+          1.  128.   314.     1.00
+          1.  129.   314.     1.00
+          1.  130.   314.     1.00
+          1.  130.   313.     1.00
+          1.  131.   313.     1.00
+          1.  132.   313.     1.00
+          1.  133.   313.     1.00
+          1.  134.   313.     1.00
+          1.  134.   312.     1.00
+          1.  135.   312.     1.00
+          1.  136.   312.     1.00
+          1.  137.   312.     1.00
+          1.  138.   312.     1.00
+          1.  139.   312.     1.00
+          1.  139.   311.     1.00
+          1.  140.   311.     1.00
+          1.  141.   311.     1.00
+          1.  141.   310.     1.00
+          1.  142.   310.     1.00
+          1.  142.   309.     1.00
+          1.  143.   309.     1.00
+          1.  143.   308.     1.00
+          1.  143.   307.     1.00
+          1.  144.   307.     1.00
+          1.  144.   306.     1.00
+          1.  144.   305.     1.00
+          1.  145.   305.     1.00
+          1.  145.   304.     1.00
+          1.  145.   303.     1.00
+          1.  145.   302.     1.00
+          1.  146.   302.     1.00
+          1.  146.   301.     1.00
+          1.  146.   300.     1.00
+          1.  146.   299.     1.00
+          1.  147.   299.     1.00
+          1.  148.   299.     1.00
+          1.  148.   298.     1.00
+          1.  148.   297.     1.00
+          1.  149.   297.     1.00
+          1.  149.   296.     1.00
+          1.  149.   295.     1.00
+          1.  150.   295.     1.00
+          1.  150.   294.     1.00
+          1.  151.   294.     1.00
+          1.  151.   293.     1.00
+          1.  151.   292.     1.00
+          1.  152.   292.     1.00
+          1.  152.   291.     1.00
+          1.  153.   291.     1.00
+          1.  153.   290.     1.00
+          1.  153.   289.     1.00
+          1.  154.   289.     1.00
+          1.  154.   288.     1.00
+          1.  154.   287.     1.00
+          1.  154.   286.     1.00
+          1.  154.   285.     1.00
+          1.  155.   285.     1.00
+          1.  155.   284.     1.00
+          1.  155.   283.     1.00
+          1.  155.   282.     1.00
+          1.  155.   281.     1.00
+          1.  156.   281.     1.00
+          1.  156.   280.     1.00
+          1.  156.   279.     1.00
+          1.  156.   278.     1.00
+          1.  157.   278.     1.00
+          1.  157.   277.     1.00
+          1.  157.   276.     1.00
+          1.  158.   276.     1.00
+          1.  158.   275.     1.00
+          1.  159.   275.     1.00
+          1.  159.   274.     1.00
+          1.  159.   273.     1.00
+          1.  160.   273.     1.00
+          1.  160.   272.     1.00
+          1.  160.   271.     1.00
+          1.  160.   270.     1.00
+          1.  160.   269.     1.00
+          1.  160.   268.     1.00
+          1.  161.   268.     1.00
+          1.  161.   267.     1.00
+          1.  161.   266.     1.00
+          1.  162.   266.     1.00
+          1.  160.   266.     1.00
+          1.  159.   266.     1.00
+          1.  159.   265.     1.00
+          1.  158.   265.     1.00
+          1.  158.   264.     1.00
+          1.  158.   263.     1.00
+          1.  159.   263.     1.00
+          1.  159.   262.     1.00
+          1.  160.   262.     1.00
+          1.  160.   261.     1.00
+          1.  161.   261.     1.00
+          1.  162.   261.     1.00
+          1.  162.   260.     1.00
+          1.  162.   259.     1.00
+          1.  163.   259.     1.00
+          1.  163.   258.     1.00
+          1.  163.   257.     1.00
+          1.  164.   257.     1.00
+          1.  164.   256.     1.00
+          1.  165.   256.     1.00
+          1.  165.   255.     1.00
+          1.  164.   255.     1.00
+          1.  164.   254.     1.00
+          1.  164.   253.     1.00
+          1.  164.   252.     1.00
+          1.  164.   251.     1.00
+          1.  163.   251.     1.00
+          1.  163.   250.     1.00
+          1.  162.   250.     1.00
+          1.  162.   249.     1.00
+          1.  161.   249.     1.00
+          1.  160.   249.     1.00
+          1.  160.   248.     1.00
+          1.  160.   247.     1.00
+          1.  160.   246.     1.00
+          1.  160.   245.     1.00
+          1.  160.   244.     1.00
+          1.  159.   244.     1.00
+          1.  159.   243.     1.00
+          1.  159.   242.     1.00
+          1.  159.   241.     1.00
+          1.  158.   241.     1.00
+          1.  158.   240.     1.00
+          1.  157.   240.     1.00
+          1.  157.   239.     1.00
+          1.  157.   238.     1.00
+          1.  157.   237.     1.00
+          1.  156.   237.     1.00
+          1.  156.   236.     1.00
+          1.  156.   235.     1.00
+          1.  156.   234.     1.00
+          1.  156.   233.     1.00
+          1.  156.   232.     1.00
+          1.  156.   231.     1.00
+          1.  155.   231.     1.00
+          1.  155.   230.     1.00
+          1.  155.   229.     1.00
+          1.  155.   228.     1.00
+          1.  155.   227.     1.00
+          1.  155.   226.     1.00
+          1.  155.   225.     1.00
+          1.  154.   225.     1.00
+          1.  154.   224.     1.00
+          1.  154.   223.     1.00
+          1.  154.   222.     1.00
+          1.  154.   221.     1.00
+          1.  154.   220.     1.00
+          1.  154.   219.     1.00
+          1.  154.   218.     1.00
+          1.  153.   218.     1.00
+          1.  153.   217.     1.00
+          1.  153.   216.     1.00
+          1.  153.   215.     1.00
+          1.  153.   214.     1.00
+          1.  153.   213.     1.00
+          1.  153.   212.     1.00
+          1.  153.   211.     1.00
+          1.  153.   210.     1.00
+          1.  153.   209.     1.00
+          1.  153.   208.     1.00
+          1.  153.   207.     1.00
+          1.  153.   206.     1.00
+          1.  152.   206.     1.00
+          1.  152.   205.     1.00
+          1.  152.   204.     1.00
+          1.  152.   203.     1.00
+          1.  152.   202.     1.00
+          1.  152.   201.     1.00
+          1.  151.   201.     1.00
+          1.  151.   200.     1.00
+          1.  151.   199.     1.00
+          1.  150.   199.     1.00
+          1.  150.   198.     1.00
+          1.  149.   198.     1.00
+          1.  149.   197.     1.00
+          1.  148.   197.     1.00
+          1.  148.   196.     1.00
+          1.  147.   196.     1.00
+          1.  147.   195.     1.00
+          1.  147.   194.     1.00
+          1.  146.   194.     1.00
+          1.  146.   193.     1.00
+          1.  146.   192.     1.00
+          1.  145.   192.     1.00
+          1.  145.   191.     1.00
+          1.  144.   191.     1.00
+          1.  144.   190.     1.00
+          1.  144.   189.     1.00
+          1.  143.   189.     1.00
+          1.  143.   188.     1.00
+          1.  143.   187.     1.00
+          1.  143.   186.     1.00
+          1.  143.   185.     1.00
+          1.  142.   185.     1.00
+          1.  142.   184.     1.00
+          1.  142.   183.     1.00
+          1.  141.   183.     1.00
+          1.  141.   182.     1.00
+          1.  140.   182.     1.00
+          1.  140.   181.     1.00
+          1.  139.   181.     1.00
+          1.  139.   180.     1.00
+          1.  139.   179.     1.00
+          1.  138.   179.     1.00
+          1.  137.   179.     1.00
+          1.  137.   178.     1.00
+          1.  137.   177.     1.00
+          1.  137.   176.     1.00
+          1.  136.   176.     1.00
+          1.  136.   175.     1.00
+          1.  136.   174.     1.00
+          1.  136.   173.     1.00
+          1.  136.   172.     1.00
+          1.  136.   171.     1.00
+          1.  135.   171.     1.00
+          1.  135.   170.     1.00
+          1.  134.   170.     1.00
+          1.  133.   170.     1.00
+          1.  133.   169.     1.00
+          1.  132.   169.     1.00
+          1.  131.   169.     1.00
+          1.  131.   168.     1.00
+          1.  130.   168.     1.00
+          1.  129.   168.     1.00
+          1.  129.   167.     1.00
+          1.  128.   167.     1.00
+          1.  128.   166.     1.00
+          1.  127.   166.     1.00
+          1.  127.   165.     1.00
+          1.  126.   165.     1.00
+          1.  126.   164.     1.00
+          1.  125.   164.     1.00
+          1.  125.   163.     1.00
+          1.  125.   162.     1.00
+          1.  125.   161.     1.00
+          1.  124.   161.     1.00
+          1.  124.   160.     1.00
+          1.  124.   159.     1.00
+          1.  124.   158.     1.00
+          1.  124.   157.     1.00
+          1.  124.   156.     1.00
+          1.  123.   156.     1.00
+          1.  123.   155.     1.00
+          1.  123.   154.     1.00
+          1.  123.   153.     1.00
+          1.  123.   152.     1.00
+          1.  123.   151.     1.00
+          1.  123.   150.     1.00
+          1.  123.   149.     1.00
+          1.  123.   148.     1.00
+          1.  123.   147.     1.00
+          1.  123.   146.     1.00
+          1.  122.   146.     1.00
+          1.  122.   145.     1.00
+          1.  122.   144.     1.00
+          1.  121.   144.     1.00
+          1.  121.   143.     1.00
+          1.  121.   142.     1.00
+          1.  121.   141.     1.00
+          1.  121.   140.     1.00
+          1.  121.   139.     1.00
+          1.  120.   139.     1.00
+          1.  120.   138.     1.00
+          1.  120.   137.     1.00
+          1.  120.   136.     1.00
+          1.  119.   136.     1.00
+          1.  119.   135.     1.00
+          1.  119.   134.     1.00
+          1.  119.   133.     1.00
+          1.  119.   132.     1.00
+          1.  119.   131.     1.00
+          1.  119.   130.     1.00
+          1.  118.   130.     1.00
+          1.  118.   129.     1.00
+          1.  118.   128.     1.00
+          1.  118.   127.     1.00
+          1.  118.   126.     1.00
+          1.  118.   125.     1.00
+          1.  118.   124.     1.00
+          1.  118.   123.     1.00
+          1.  118.   122.     1.00
+          1.  118.   121.     1.00
+          1.  118.   120.     1.00
+          1.  118.   119.     1.00
+          1.  118.   118.     1.00
+          1.  118.   117.     1.00
+          1.  118.   116.     1.00
+          1.  118.   115.     1.00
+          1.  118.   114.     1.00
+          1.  118.   113.     1.00
+          1.  118.   112.     1.00
+          1.  118.   111.     1.00
+          1.  119.   111.     1.00
+          1.  119.   110.     1.00
+          1.  119.   109.     1.00
+          1.  120.   109.     1.00
+          1.  120.   108.     1.00
+          1.  118.   110.     1.00
+          1.  117.   110.     1.00
+          1.  117.   111.     1.00
+          1.  116.   110.     1.00
+          1.  116.   109.     1.00
+          1.  116.   108.     1.00
+          1.  116.   107.     1.00
+          1.  116.   106.     1.00
+          1.  116.   105.     1.00
+          1.  115.   105.     1.00
+          1.  115.   104.     1.00
+          1.  114.   104.     1.00
+          1.  114.   103.     1.00
+          1.  114.   102.     1.00
+          1.  114.   101.     1.00
+          1.  113.   101.     1.00
+          1.  113.   100.     1.00
+          1.  113.    99.     1.00
+          1.  113.    98.     1.00
+          1.  113.    97.     1.00
+          1.  113.    96.     1.00
+          1.  113.    95.     1.00
+          1.  112.    95.     1.00
+          1.  112.    94.     1.00
+          1.  112.    93.     1.00
+          1.  112.    92.     1.00
+          1.  112.    91.     1.00
+          1.  112.    90.     1.00
+          1.  111.    90.     1.00
+          1.  111.    89.     1.00
+          1.  111.    88.     1.00
+          1.  111.    87.     1.00
+          1.  111.    86.     1.00
+          1.  111.    85.     1.00
+          1.  111.    84.     1.00
+          1.  111.    83.     1.00
+          1.  111.    82.     1.00
+          1.  111.    81.     1.00
+          1.  111.    80.     1.00
+          1.  110.    80.     1.00
+          1.  111.    79.     1.00
+          1.  111.    78.     1.00
+          1.  111.    77.     1.00
+          1.  111.    76.     1.00
+          1.  111.    75.     1.00
+          1.  112.    75.     1.00
+          1.  112.    74.     1.00
+          1.  112.    73.     1.00
+          1.  112.    72.     1.00
+
+   GROUP NUMBER:  34   BOUNDARY TYPE: CHD   NUMBER OF CELLS IN GROUP:    82
+   NUMBER OF FLOW OBSERVATIONS:     1
+
+                                        OBSERVED
+                    REFER.            BOUNDARY FLOW
+       OBSERVATION  STRESS    TIME     GAIN (-) OR              STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     LOSS (+)    STATISTIC     TYPE      SYM.
+   165 no_ch5           1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.  112.    72.     1.00
+          1.  112.    71.     1.00
+          1.  112.    70.     1.00
+          1.  113.    70.     1.00
+          1.  113.    69.     1.00
+          1.  113.    68.     1.00
+          1.  113.    67.     1.00
+          1.  114.    67.     1.00
+          1.  114.    66.     1.00
+          1.  114.    65.     1.00
+          1.  114.    64.     1.00
+          1.  115.    64.     1.00
+          1.  115.    63.     1.00
+          1.  115.    62.     1.00
+          1.  115.    61.     1.00
+          1.  115.    60.     1.00
+          1.  115.    59.     1.00
+          1.  115.    58.     1.00
+          1.  115.    57.     1.00
+          1.  115.    56.     1.00
+          1.  115.    55.     1.00
+          1.  115.    54.     1.00
+          1.  115.    53.     1.00
+          1.  115.    52.     1.00
+          1.  116.    52.     1.00
+          1.  116.    51.     1.00
+          1.  116.    50.     1.00
+          1.  116.    49.     1.00
+          1.  116.    48.     1.00
+          1.  116.    47.     1.00
+          1.  116.    46.     1.00
+          1.  116.    45.     1.00
+          1.  116.    44.     1.00
+          1.  116.    43.     1.00
+          1.  116.    42.     1.00
+          1.  116.    41.     1.00
+          1.  116.    40.     1.00
+          1.  117.    40.     1.00
+          1.  117.    39.     1.00
+          1.  117.    38.     1.00
+          1.  117.    37.     1.00
+          1.  117.    36.     1.00
+          1.  117.    35.     1.00
+          1.  117.    34.     1.00
+          1.  117.    33.     1.00
+          1.  117.    32.     1.00
+          1.  118.    32.     1.00
+          1.  118.    31.     1.00
+          1.  118.    30.     1.00
+          1.  118.    29.     1.00
+          1.  118.    28.     1.00
+          1.  119.    28.     1.00
+          1.  119.    27.     1.00
+          1.  119.    26.     1.00
+          1.  119.    25.     1.00
+          1.  118.    25.     1.00
+          1.  118.    24.     1.00
+          1.  118.    23.     1.00
+          1.  117.    23.     1.00
+          1.  117.    22.     1.00
+          1.  117.    21.     1.00
+          1.  117.    20.     1.00
+          1.  117.    19.     1.00
+          1.  116.    19.     1.00
+          1.  116.    18.     1.00
+          1.  116.    17.     1.00
+          1.  116.    16.     1.00
+          1.  116.    15.     1.00
+          1.  116.    14.     1.00
+          1.  115.    14.     1.00
+          1.  115.    13.     1.00
+          1.  115.    12.     1.00
+          1.  115.    11.     1.00
+          1.  115.    10.     1.00
+          1.  115.     9.     1.00
+          1.  115.     8.     1.00
+          1.  115.     7.     1.00
+          1.  114.     7.     1.00
+          1.  114.     6.     1.00
+          1.  113.     6.     1.00
+          1.  113.     5.     1.00
+          1.  112.     5.     1.00
+
+   GROUP NUMBER:  35   BOUNDARY TYPE: CHD   NUMBER OF CELLS IN GROUP:    27
+   NUMBER OF FLOW OBSERVATIONS:     1
+
+                                        OBSERVED
+                    REFER.            BOUNDARY FLOW
+       OBSERVATION  STRESS    TIME     GAIN (-) OR              STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     LOSS (+)    STATISTIC     TYPE      SYM.
+   166 no_ch6           1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   36.   207.     1.00
+          1.   36.   208.     1.00
+          1.   36.   209.     1.00
+          1.   36.   210.     1.00
+          1.   36.   211.     1.00
+          1.   37.   211.     1.00
+          1.   37.   212.     1.00
+          1.   37.   213.     1.00
+          1.   37.   214.     1.00
+          1.   37.   215.     1.00
+          1.   37.   216.     1.00
+          1.   38.   216.     1.00
+          1.   38.   217.     1.00
+          1.   38.   218.     1.00
+          1.   38.   219.     1.00
+          1.   38.   220.     1.00
+          1.   38.   221.     1.00
+          1.   38.   222.     1.00
+          1.   39.   222.     1.00
+          1.   39.   223.     1.00
+          1.   39.   224.     1.00
+          1.   39.   225.     1.00
+          1.   39.   226.     1.00
+          1.   39.   227.     1.00
+          1.   39.   228.     1.00
+          1.   39.   229.     1.00
+          1.   40.   229.     1.00
+
+   GROUP NUMBER:  36   BOUNDARY TYPE: CHD   NUMBER OF CELLS IN GROUP:    21
+   NUMBER OF FLOW OBSERVATIONS:     1
+
+                                        OBSERVED
+                    REFER.            BOUNDARY FLOW
+       OBSERVATION  STRESS    TIME     GAIN (-) OR              STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     LOSS (+)    STATISTIC     TYPE      SYM.
+   167 no_ch7           1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.    8.    44.     1.00
+          1.    9.    44.     1.00
+          1.    9.    45.     1.00
+          1.   10.    45.     1.00
+          1.   10.    46.     1.00
+          1.   11.    46.     1.00
+          1.   11.    47.     1.00
+          1.   12.    47.     1.00
+          1.   12.    48.     1.00
+          1.   12.    49.     1.00
+          1.   12.    50.     1.00
+          1.   12.    51.     1.00
+          1.   12.    52.     1.00
+          1.   12.    53.     1.00
+          1.   12.    54.     1.00
+          1.   12.    55.     1.00
+          1.   12.    56.     1.00
+          1.   12.    57.     1.00
+          1.   12.    58.     1.00
+          1.   13.    58.     1.00
+          1.   13.    59.     1.00
+
+   GROUP NUMBER:  37   BOUNDARY TYPE: CHD   NUMBER OF CELLS IN GROUP:    34
+   NUMBER OF FLOW OBSERVATIONS:     1
+
+                                        OBSERVED
+                    REFER.            BOUNDARY FLOW
+       OBSERVATION  STRESS    TIME     GAIN (-) OR              STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     LOSS (+)    STATISTIC     TYPE      SYM.
+   168 no_ch8           1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   40.   229.     1.00
+          1.   39.   229.     1.00
+          1.   39.   230.     1.00
+          1.   39.   231.     1.00
+          1.   39.   232.     1.00
+          1.   38.   232.     1.00
+          1.   38.   233.     1.00
+          1.   38.   234.     1.00
+          1.   39.   234.     1.00
+          1.   39.   235.     1.00
+          1.   39.   236.     1.00
+          1.   39.   237.     1.00
+          1.   40.   237.     1.00
+          1.   40.   238.     1.00
+          1.   39.   238.     1.00
+          1.   39.   239.     1.00
+          1.   39.   240.     1.00
+          1.   39.   241.     1.00
+          1.   40.   241.     1.00
+          1.   41.   241.     1.00
+          1.   42.   241.     1.00
+          1.   43.   241.     1.00
+          1.   44.   241.     1.00
+          1.   44.   242.     1.00
+          1.   45.   242.     1.00
+          1.   46.   242.     1.00
+          1.   46.   243.     1.00
+          1.   46.   244.     1.00
+          1.   46.   245.     1.00
+          1.   47.   245.     1.00
+          1.   48.   245.     1.00
+          1.   48.   246.     1.00
+          1.   49.   246.     1.00
+          1.   50.   246.     1.00
+
+   GROUP NUMBER:  38   BOUNDARY TYPE: CHD   NUMBER OF CELLS IN GROUP:    31
+   NUMBER OF FLOW OBSERVATIONS:     1
+
+                                        OBSERVED
+                    REFER.            BOUNDARY FLOW
+       OBSERVATION  STRESS    TIME     GAIN (-) OR              STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     LOSS (+)    STATISTIC     TYPE      SYM.
+   169 no_ch9           1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   50.   246.     1.00
+          1.   49.   246.     1.00
+          1.   49.   247.     1.00
+          1.   48.   247.     1.00
+          1.   47.   247.     1.00
+          1.   47.   248.     1.00
+          1.   46.   248.     1.00
+          1.   45.   248.     1.00
+          1.   44.   248.     1.00
+          1.   43.   248.     1.00
+          1.   42.   248.     1.00
+          1.   41.   248.     1.00
+          1.   40.   248.     1.00
+          1.   39.   248.     1.00
+          1.   39.   249.     1.00
+          1.   40.   249.     1.00
+          1.   40.   250.     1.00
+          1.   40.   251.     1.00
+          1.   41.   251.     1.00
+          1.   42.   251.     1.00
+          1.   43.   251.     1.00
+          1.   43.   252.     1.00
+          1.   44.   252.     1.00
+          1.   45.   252.     1.00
+          1.   46.   252.     1.00
+          1.   47.   252.     1.00
+          1.   48.   252.     1.00
+          1.   49.   252.     1.00
+          1.   50.   252.     1.00
+          1.   50.   253.     1.00
+          1.   50.   254.     1.00
+
+   GROUP NUMBER:  39   BOUNDARY TYPE: CHD   NUMBER OF CELLS IN GROUP:   162
+   NUMBER OF FLOW OBSERVATIONS:     1
+
+                                        OBSERVED
+                    REFER.            BOUNDARY FLOW
+       OBSERVATION  STRESS    TIME     GAIN (-) OR              STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     LOSS (+)    STATISTIC     TYPE      SYM.
+   170 no_ch10          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.  112.     5.     1.00
+          1.  111.     5.     1.00
+          1.  111.     6.     1.00
+          1.  110.     6.     1.00
+          1.  109.     6.     1.00
+          1.  109.     7.     1.00
+          1.  108.     7.     1.00
+          1.  108.     8.     1.00
+          1.  107.     8.     1.00
+          1.  106.     8.     1.00
+          1.  105.     8.     1.00
+          1.  105.     9.     1.00
+          1.  104.     9.     1.00
+          1.  104.     8.     1.00
+          1.  103.     8.     1.00
+          1.  103.     9.     1.00
+          1.  102.     9.     1.00
+          1.  101.     9.     1.00
+          1.  100.     9.     1.00
+          1.  100.    10.     1.00
+          1.   99.    10.     1.00
+          1.   98.    10.     1.00
+          1.   98.    11.     1.00
+          1.   97.    11.     1.00
+          1.   96.    11.     1.00
+          1.   95.    11.     1.00
+          1.   95.    12.     1.00
+          1.   94.    12.     1.00
+          1.   93.    12.     1.00
+          1.   92.    12.     1.00
+          1.   91.    12.     1.00
+          1.   90.    12.     1.00
+          1.   89.    12.     1.00
+          1.   88.    12.     1.00
+          1.   87.    12.     1.00
+          1.   86.    12.     1.00
+          1.   85.    12.     1.00
+          1.   84.    12.     1.00
+          1.   84.    13.     1.00
+          1.   83.    13.     1.00
+          1.   82.    13.     1.00
+          1.   81.    13.     1.00
+          1.   80.    13.     1.00
+          1.   79.    13.     1.00
+          1.   78.    13.     1.00
+          1.   77.    13.     1.00
+          1.   76.    13.     1.00
+          1.   75.    13.     1.00
+          1.   75.    14.     1.00
+          1.   74.    14.     1.00
+          1.   73.    14.     1.00
+          1.   72.    14.     1.00
+          1.   71.    14.     1.00
+          1.   70.    14.     1.00
+          1.   69.    14.     1.00
+          1.   68.    14.     1.00
+          1.   67.    14.     1.00
+          1.   67.    15.     1.00
+          1.   66.    15.     1.00
+          1.   65.    15.     1.00
+          1.   64.    15.     1.00
+          1.   63.    15.     1.00
+          1.   63.    16.     1.00
+          1.   62.    16.     1.00
+          1.   61.    16.     1.00
+          1.   60.    16.     1.00
+          1.   60.    17.     1.00
+          1.   59.    17.     1.00
+          1.   59.    18.     1.00
+          1.   58.    18.     1.00
+          1.   58.    19.     1.00
+          1.   57.    19.     1.00
+          1.   56.    19.     1.00
+          1.   56.    20.     1.00
+          1.   55.    20.     1.00
+          1.   54.    20.     1.00
+          1.   53.    20.     1.00
+          1.   53.    21.     1.00
+          1.   52.    21.     1.00
+          1.   51.    21.     1.00
+          1.   50.    21.     1.00
+          1.   49.    21.     1.00
+          1.   48.    21.     1.00
+          1.   48.    22.     1.00
+          1.   47.    22.     1.00
+          1.   46.    22.     1.00
+          1.   45.    22.     1.00
+          1.   44.    22.     1.00
+          1.   44.    23.     1.00
+          1.   43.    23.     1.00
+          1.   42.    23.     1.00
+          1.   41.    23.     1.00
+          1.   40.    23.     1.00
+          1.   40.    24.     1.00
+          1.   39.    24.     1.00
+          1.   38.    24.     1.00
+          1.   37.    24.     1.00
+          1.   37.    25.     1.00
+          1.   36.    25.     1.00
+          1.   35.    25.     1.00
+          1.   34.    25.     1.00
+          1.   33.    25.     1.00
+          1.   32.    25.     1.00
+          1.   31.    25.     1.00
+          1.   30.    25.     1.00
+          1.   29.    25.     1.00
+          1.   28.    25.     1.00
+          1.   27.    25.     1.00
+          1.   26.    25.     1.00
+          1.   25.    25.     1.00
+          1.   24.    25.     1.00
+          1.   23.    25.     1.00
+          1.   23.    26.     1.00
+          1.   22.    26.     1.00
+          1.   21.    26.     1.00
+          1.   20.    26.     1.00
+          1.   19.    26.     1.00
+          1.   18.    26.     1.00
+          1.   17.    26.     1.00
+          1.   16.    26.     1.00
+          1.   15.    26.     1.00
+          1.   14.    26.     1.00
+          1.   13.    26.     1.00
+          1.   12.    26.     1.00
+          1.   11.    26.     1.00
+          1.   11.    25.     1.00
+          1.   10.    25.     1.00
+          1.    9.    25.     1.00
+          1.    9.    24.     1.00
+          1.    8.    24.     1.00
+          1.    8.    23.     1.00
+          1.    7.    23.     1.00
+          1.    7.    22.     1.00
+          1.    6.    22.     1.00
+          1.    6.    23.     1.00
+          1.    5.    23.     1.00
+          1.    5.    24.     1.00
+          1.    5.    25.     1.00
+          1.    5.    26.     1.00
+          1.    5.    27.     1.00
+          1.    6.    27.     1.00
+          1.    6.    28.     1.00
+          1.    6.    29.     1.00
+          1.    6.    30.     1.00
+          1.    7.    30.     1.00
+          1.    7.    31.     1.00
+          1.    7.    32.     1.00
+          1.    7.    33.     1.00
+          1.    7.    34.     1.00
+          1.    7.    35.     1.00
+          1.    7.    36.     1.00
+          1.    7.    37.     1.00
+          1.    6.    37.     1.00
+          1.    6.    38.     1.00
+          1.    6.    39.     1.00
+          1.    6.    40.     1.00
+          1.    7.    40.     1.00
+          1.    7.    41.     1.00
+          1.    7.    42.     1.00
+          1.    7.    43.     1.00
+          1.    8.    43.     1.00
+          1.    8.    44.     1.00
+
+   GROUP NUMBER:  40   BOUNDARY TYPE: CHD   NUMBER OF CELLS IN GROUP:    59
+   NUMBER OF FLOW OBSERVATIONS:     1
+
+                                        OBSERVED
+                    REFER.            BOUNDARY FLOW
+       OBSERVATION  STRESS    TIME     GAIN (-) OR              STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     LOSS (+)    STATISTIC     TYPE      SYM.
+   171 no_ch11          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   50.   254.     1.00
+          1.   49.   254.     1.00
+          1.   48.   254.     1.00
+          1.   47.   254.     1.00
+          1.   46.   254.     1.00
+          1.   45.   254.     1.00
+          1.   45.   255.     1.00
+          1.   44.   255.     1.00
+          1.   43.   255.     1.00
+          1.   43.   256.     1.00
+          1.   44.   256.     1.00
+          1.   45.   256.     1.00
+          1.   45.   257.     1.00
+          1.   46.   257.     1.00
+          1.   47.   257.     1.00
+          1.   48.   257.     1.00
+          1.   48.   258.     1.00
+          1.   49.   258.     1.00
+          1.   50.   258.     1.00
+          1.   50.   259.     1.00
+          1.   50.   260.     1.00
+          1.   49.   260.     1.00
+          1.   48.   260.     1.00
+          1.   48.   261.     1.00
+          1.   47.   261.     1.00
+          1.   47.   262.     1.00
+          1.   47.   263.     1.00
+          1.   47.   264.     1.00
+          1.   46.   264.     1.00
+          1.   45.   264.     1.00
+          1.   45.   265.     1.00
+          1.   44.   265.     1.00
+          1.   43.   265.     1.00
+          1.   43.   266.     1.00
+          1.   42.   266.     1.00
+          1.   42.   267.     1.00
+          1.   42.   268.     1.00
+          1.   42.   269.     1.00
+          1.   43.   269.     1.00
+          1.   43.   270.     1.00
+          1.   44.   270.     1.00
+          1.   44.   271.     1.00
+          1.   44.   272.     1.00
+          1.   45.   272.     1.00
+          1.   45.   273.     1.00
+          1.   45.   274.     1.00
+          1.   45.   275.     1.00
+          1.   45.   276.     1.00
+          1.   45.   277.     1.00
+          1.   45.   278.     1.00
+          1.   44.   278.     1.00
+          1.   44.   279.     1.00
+          1.   44.   280.     1.00
+          1.   43.   280.     1.00
+          1.   43.   281.     1.00
+          1.   43.   282.     1.00
+          1.   42.   282.     1.00
+          1.   42.   283.     1.00
+          1.   42.   284.     1.00
+
+   GROUP NUMBER:  41   BOUNDARY TYPE: CHD   NUMBER OF CELLS IN GROUP:   127
+   NUMBER OF FLOW OBSERVATIONS:     1
+
+                                        OBSERVED
+                    REFER.            BOUNDARY FLOW
+       OBSERVATION  STRESS    TIME     GAIN (-) OR              STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     LOSS (+)    STATISTIC     TYPE      SYM.
+   172 no_ch12          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   42.   284.     1.00
+          1.   41.   284.     1.00
+          1.   41.   285.     1.00
+          1.   41.   286.     1.00
+          1.   41.   287.     1.00
+          1.   40.   287.     1.00
+          1.   40.   288.     1.00
+          1.   40.   289.     1.00
+          1.   40.   290.     1.00
+          1.   39.   290.     1.00
+          1.   39.   291.     1.00
+          1.   39.   292.     1.00
+          1.   39.   293.     1.00
+          1.   38.   293.     1.00
+          1.   38.   294.     1.00
+          1.   38.   295.     1.00
+          1.   38.   296.     1.00
+          1.   37.   296.     1.00
+          1.   37.   297.     1.00
+          1.   37.   298.     1.00
+          1.   36.   298.     1.00
+          1.   36.   299.     1.00
+          1.   36.   300.     1.00
+          1.   35.   300.     1.00
+          1.   35.   301.     1.00
+          1.   35.   302.     1.00
+          1.   35.   303.     1.00
+          1.   34.   303.     1.00
+          1.   34.   304.     1.00
+          1.   34.   305.     1.00
+          1.   34.   306.     1.00
+          1.   33.   306.     1.00
+          1.   33.   307.     1.00
+          1.   33.   308.     1.00
+          1.   32.   308.     1.00
+          1.   32.   309.     1.00
+          1.   31.   309.     1.00
+          1.   31.   310.     1.00
+          1.   30.   310.     1.00
+          1.   30.   311.     1.00
+          1.   29.   311.     1.00
+          1.   31.   311.     1.00
+          1.   31.   312.     1.00
+          1.   32.   312.     1.00
+          1.   33.   312.     1.00
+          1.   34.   312.     1.00
+          1.   34.   313.     1.00
+          1.   35.   313.     1.00
+          1.   36.   313.     1.00
+          1.   37.   313.     1.00
+          1.   38.   313.     1.00
+          1.   38.   314.     1.00
+          1.   39.   314.     1.00
+          1.   39.   315.     1.00
+          1.   39.   316.     1.00
+          1.   38.   316.     1.00
+          1.   37.   316.     1.00
+          1.   37.   317.     1.00
+          1.   36.   317.     1.00
+          1.   35.   317.     1.00
+          1.   34.   317.     1.00
+          1.   33.   317.     1.00
+          1.   33.   318.     1.00
+          1.   32.   318.     1.00
+          1.   31.   318.     1.00
+          1.   31.   319.     1.00
+          1.   31.   320.     1.00
+          1.   30.   320.     1.00
+          1.   30.   321.     1.00
+          1.   30.   322.     1.00
+          1.   29.   322.     1.00
+          1.   29.   323.     1.00
+          1.   28.   323.     1.00
+          1.   27.   323.     1.00
+          1.   27.   324.     1.00
+          1.   27.   325.     1.00
+          1.   26.   325.     1.00
+          1.   27.   326.     1.00
+          1.   28.   326.     1.00
+          1.   28.   327.     1.00
+          1.   28.   328.     1.00
+          1.   28.   329.     1.00
+          1.   28.   330.     1.00
+          1.   28.   331.     1.00
+          1.   28.   332.     1.00
+          1.   29.   332.     1.00
+          1.   29.   333.     1.00
+          1.   29.   334.     1.00
+          1.   29.   335.     1.00
+          1.   29.   336.     1.00
+          1.   29.   337.     1.00
+          1.   30.   337.     1.00
+          1.   30.   338.     1.00
+          1.   30.   339.     1.00
+          1.   30.   340.     1.00
+          1.   30.   341.     1.00
+          1.   31.   341.     1.00
+          1.   31.   342.     1.00
+          1.   31.   343.     1.00
+          1.   31.   344.     1.00
+          1.   32.   344.     1.00
+          1.   32.   345.     1.00
+          1.   32.   346.     1.00
+          1.   33.   346.     1.00
+          1.   33.   347.     1.00
+          1.   34.   347.     1.00
+          1.   34.   348.     1.00
+          1.   35.   348.     1.00
+          1.   35.   349.     1.00
+          1.   36.   349.     1.00
+          1.   37.   349.     1.00
+          1.   37.   350.     1.00
+          1.   38.   350.     1.00
+          1.   39.   350.     1.00
+          1.   40.   350.     1.00
+          1.   41.   350.     1.00
+          1.   42.   350.     1.00
+          1.   43.   350.     1.00
+          1.   44.   350.     1.00
+          1.   45.   350.     1.00
+          1.   46.   350.     1.00
+          1.   47.   350.     1.00
+          1.   47.   351.     1.00
+          1.   48.   351.     1.00
+          1.   49.   351.     1.00
+          1.   50.   351.     1.00
+          1.   51.   351.     1.00
+
+   GROUP NUMBER:  42   BOUNDARY TYPE: CHD   NUMBER OF CELLS IN GROUP:   216
+   NUMBER OF FLOW OBSERVATIONS:     1
+
+                                        OBSERVED
+                    REFER.            BOUNDARY FLOW
+       OBSERVATION  STRESS    TIME     GAIN (-) OR              STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     LOSS (+)    STATISTIC     TYPE      SYM.
+   173 no_ch13          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   13.    59.     1.00
+          1.   14.    59.     1.00
+          1.   14.    60.     1.00
+          1.   14.    61.     1.00
+          1.   14.    62.     1.00
+          1.   14.    63.     1.00
+          1.   13.    63.     1.00
+          1.   13.    64.     1.00
+          1.   13.    65.     1.00
+          1.   13.    66.     1.00
+          1.   13.    67.     1.00
+          1.   13.    68.     1.00
+          1.   13.    69.     1.00
+          1.   14.    69.     1.00
+          1.   14.    70.     1.00
+          1.   14.    71.     1.00
+          1.   14.    72.     1.00
+          1.   14.    73.     1.00
+          1.   15.    73.     1.00
+          1.   15.    74.     1.00
+          1.   15.    75.     1.00
+          1.   15.    76.     1.00
+          1.   15.    77.     1.00
+          1.   15.    78.     1.00
+          1.   15.    79.     1.00
+          1.   15.    80.     1.00
+          1.   15.    81.     1.00
+          1.   15.    82.     1.00
+          1.   16.    82.     1.00
+          1.   16.    83.     1.00
+          1.   17.    83.     1.00
+          1.   17.    84.     1.00
+          1.   17.    85.     1.00
+          1.   17.    86.     1.00
+          1.   18.    86.     1.00
+          1.   18.    87.     1.00
+          1.   18.    88.     1.00
+          1.   18.    89.     1.00
+          1.   18.    90.     1.00
+          1.   19.    90.     1.00
+          1.   19.    91.     1.00
+          1.   20.    91.     1.00
+          1.   20.    92.     1.00
+          1.   20.    93.     1.00
+          1.   20.    94.     1.00
+          1.   20.    95.     1.00
+          1.   19.    95.     1.00
+          1.   19.    96.     1.00
+          1.   19.    97.     1.00
+          1.   18.    97.     1.00
+          1.   18.    98.     1.00
+          1.   18.    99.     1.00
+          1.   18.   100.     1.00
+          1.   18.   101.     1.00
+          1.   19.   101.     1.00
+          1.   19.   102.     1.00
+          1.   19.   103.     1.00
+          1.   19.   104.     1.00
+          1.   19.   105.     1.00
+          1.   19.   106.     1.00
+          1.   20.   106.     1.00
+          1.   20.   107.     1.00
+          1.   20.   108.     1.00
+          1.   20.   109.     1.00
+          1.   20.   110.     1.00
+          1.   20.   111.     1.00
+          1.   20.   112.     1.00
+          1.   20.   113.     1.00
+          1.   21.   113.     1.00
+          1.   21.   114.     1.00
+          1.   21.   115.     1.00
+          1.   21.   116.     1.00
+          1.   21.   117.     1.00
+          1.   21.   118.     1.00
+          1.   21.   119.     1.00
+          1.   21.   120.     1.00
+          1.   21.   121.     1.00
+          1.   21.   122.     1.00
+          1.   21.   123.     1.00
+          1.   21.   124.     1.00
+          1.   21.   125.     1.00
+          1.   21.   126.     1.00
+          1.   21.   127.     1.00
+          1.   21.   128.     1.00
+          1.   21.   129.     1.00
+          1.   21.   130.     1.00
+          1.   21.   131.     1.00
+          1.   22.   131.     1.00
+          1.   22.   132.     1.00
+          1.   22.   133.     1.00
+          1.   22.   134.     1.00
+          1.   22.   135.     1.00
+          1.   22.   136.     1.00
+          1.   23.   136.     1.00
+          1.   23.   137.     1.00
+          1.   23.   138.     1.00
+          1.   23.   139.     1.00
+          1.   23.   140.     1.00
+          1.   24.   140.     1.00
+          1.   24.   141.     1.00
+          1.   25.   141.     1.00
+          1.   25.   142.     1.00
+          1.   25.   143.     1.00
+          1.   25.   144.     1.00
+          1.   26.   144.     1.00
+          1.   26.   145.     1.00
+          1.   26.   146.     1.00
+          1.   26.   147.     1.00
+          1.   26.   148.     1.00
+          1.   25.   148.     1.00
+          1.   25.   149.     1.00
+          1.   25.   150.     1.00
+          1.   25.   151.     1.00
+          1.   25.   152.     1.00
+          1.   25.   153.     1.00
+          1.   24.   153.     1.00
+          1.   24.   154.     1.00
+          1.   24.   155.     1.00
+          1.   24.   156.     1.00
+          1.   24.   157.     1.00
+          1.   23.   157.     1.00
+          1.   23.   158.     1.00
+          1.   23.   159.     1.00
+          1.   22.   159.     1.00
+          1.   22.   160.     1.00
+          1.   22.   161.     1.00
+          1.   21.   161.     1.00
+          1.   21.   162.     1.00
+          1.   20.   162.     1.00
+          1.   20.   163.     1.00
+          1.   19.   163.     1.00
+          1.   18.   163.     1.00
+          1.   17.   163.     1.00
+          1.   17.   164.     1.00
+          1.   16.   164.     1.00
+          1.   15.   164.     1.00
+          1.   14.   164.     1.00
+          1.   14.   165.     1.00
+          1.   13.   165.     1.00
+          1.   13.   166.     1.00
+          1.   12.   166.     1.00
+          1.   12.   167.     1.00
+          1.   11.   167.     1.00
+          1.   10.   167.     1.00
+          1.    9.   167.     1.00
+          1.    9.   168.     1.00
+          1.    8.   168.     1.00
+          1.    8.   169.     1.00
+          1.    8.   170.     1.00
+          1.    7.   170.     1.00
+          1.    7.   171.     1.00
+          1.    7.   172.     1.00
+          1.    7.   173.     1.00
+          1.    7.   174.     1.00
+          1.    7.   175.     1.00
+          1.    7.   176.     1.00
+          1.    7.   177.     1.00
+          1.    7.   178.     1.00
+          1.    7.   179.     1.00
+          1.    7.   180.     1.00
+          1.    7.   181.     1.00
+          1.    8.   181.     1.00
+          1.    8.   182.     1.00
+          1.    8.   183.     1.00
+          1.    8.   184.     1.00
+          1.    8.   185.     1.00
+          1.    8.   186.     1.00
+          1.    8.   187.     1.00
+          1.    9.   187.     1.00
+          1.    9.   188.     1.00
+          1.    9.   189.     1.00
+          1.    9.   190.     1.00
+          1.    9.   191.     1.00
+          1.   10.   191.     1.00
+          1.   10.   192.     1.00
+          1.   11.   192.     1.00
+          1.   12.   192.     1.00
+          1.   12.   193.     1.00
+          1.   13.   193.     1.00
+          1.   13.   194.     1.00
+          1.   13.   195.     1.00
+          1.   14.   195.     1.00
+          1.   14.   196.     1.00
+          1.   15.   196.     1.00
+          1.   15.   197.     1.00
+          1.   16.   197.     1.00
+          1.   16.   198.     1.00
+          1.   17.   198.     1.00
+          1.   17.   199.     1.00
+          1.   18.   199.     1.00
+          1.   19.   199.     1.00
+          1.   19.   200.     1.00
+          1.   20.   200.     1.00
+          1.   21.   200.     1.00
+          1.   22.   200.     1.00
+          1.   23.   200.     1.00
+          1.   24.   200.     1.00
+          1.   25.   200.     1.00
+          1.   25.   201.     1.00
+          1.   26.   201.     1.00
+          1.   27.   201.     1.00
+          1.   27.   202.     1.00
+          1.   28.   202.     1.00
+          1.   28.   203.     1.00
+          1.   29.   203.     1.00
+          1.   29.   204.     1.00
+          1.   30.   204.     1.00
+          1.   31.   204.     1.00
+          1.   31.   205.     1.00
+          1.   32.   205.     1.00
+          1.   33.   205.     1.00
+          1.   33.   206.     1.00
+          1.   34.   206.     1.00
+          1.   35.   206.     1.00
+          1.   35.   207.     1.00
+          1.   36.   207.     1.00
+
+   GROUP NUMBER:  43   BOUNDARY TYPE: CHD   NUMBER OF CELLS IN GROUP:   495
+   NUMBER OF FLOW OBSERVATIONS:     1
+
+                                        OBSERVED
+                    REFER.            BOUNDARY FLOW
+       OBSERVATION  STRESS    TIME     GAIN (-) OR              STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     LOSS (+)    STATISTIC     TYPE      SYM.
+   174 no_ch14          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   51.   351.     1.00
+          1.   51.   352.     1.00
+          1.   52.   352.     1.00
+          1.   52.   353.     1.00
+          1.   52.   354.     1.00
+          1.   53.   354.     1.00
+          1.   53.   355.     1.00
+          1.   53.   356.     1.00
+          1.   53.   357.     1.00
+          1.   53.   358.     1.00
+          1.   53.   359.     1.00
+          1.   52.   359.     1.00
+          1.   52.   360.     1.00
+          1.   51.   360.     1.00
+          1.   51.   361.     1.00
+          1.   50.   361.     1.00
+          1.   50.   362.     1.00
+          1.   50.   363.     1.00
+          1.   51.   363.     1.00
+          1.   51.   364.     1.00
+          1.   52.   364.     1.00
+          1.   53.   364.     1.00
+          1.   54.   364.     1.00
+          1.   55.   364.     1.00
+          1.   56.   364.     1.00
+          1.   57.   364.     1.00
+          1.   58.   364.     1.00
+          1.   59.   364.     1.00
+          1.   60.   364.     1.00
+          1.   61.   364.     1.00
+          1.   62.   364.     1.00
+          1.   63.   364.     1.00
+          1.   64.   364.     1.00
+          1.   65.   364.     1.00
+          1.   66.   364.     1.00
+          1.   67.   364.     1.00
+          1.   68.   364.     1.00
+          1.   69.   364.     1.00
+          1.   69.   363.     1.00
+          1.   70.   363.     1.00
+          1.   71.   363.     1.00
+          1.   72.   363.     1.00
+          1.   73.   363.     1.00
+          1.   74.   363.     1.00
+          1.   75.   363.     1.00
+          1.   76.   363.     1.00
+          1.   77.   363.     1.00
+          1.   78.   363.     1.00
+          1.   79.   363.     1.00
+          1.   80.   363.     1.00
+          1.   81.   363.     1.00
+          1.   81.   362.     1.00
+          1.   82.   362.     1.00
+          1.   83.   362.     1.00
+          1.   84.   362.     1.00
+          1.   85.   362.     1.00
+          1.   86.   362.     1.00
+          1.   87.   362.     1.00
+          1.   88.   362.     1.00
+          1.   89.   362.     1.00
+          1.   90.   362.     1.00
+          1.   90.   361.     1.00
+          1.   91.   361.     1.00
+          1.   92.   361.     1.00
+          1.   93.   361.     1.00
+          1.   94.   361.     1.00
+          1.   94.   360.     1.00
+          1.   95.   360.     1.00
+          1.   96.   360.     1.00
+          1.   97.   360.     1.00
+          1.   97.   359.     1.00
+          1.   98.   359.     1.00
+          1.   98.   358.     1.00
+          1.   99.   358.     1.00
+          1.   99.   357.     1.00
+          1.  100.   357.     1.00
+          1.  100.   356.     1.00
+          1.  101.   356.     1.00
+          1.  101.   355.     1.00
+          1.  102.   355.     1.00
+          1.  102.   354.     1.00
+          1.  103.   354.     1.00
+          1.  103.   353.     1.00
+          1.  103.   352.     1.00
+          1.  104.   352.     1.00
+          1.  104.   351.     1.00
+          1.  104.   350.     1.00
+          1.  104.   349.     1.00
+          1.  105.   349.     1.00
+          1.  105.   348.     1.00
+          1.  105.   347.     1.00
+          1.  105.   346.     1.00
+          1.  105.   345.     1.00
+          1.  105.   344.     1.00
+          1.  105.   343.     1.00
+          1.  106.   343.     1.00
+          1.  106.   342.     1.00
+          1.  106.   341.     1.00
+          1.  106.   340.     1.00
+          1.  106.   339.     1.00
+          1.  107.   339.     1.00
+          1.  107.   338.     1.00
+          1.  107.   337.     1.00
+          1.  108.   337.     1.00
+          1.  108.   336.     1.00
+          1.  108.   335.     1.00
+          1.  108.   334.     1.00
+          1.  109.   334.     1.00
+          1.  109.   333.     1.00
+          1.  109.   332.     1.00
+          1.  110.   332.     1.00
+          1.  110.   331.     1.00
+          1.  110.   330.     1.00
+          1.  111.   330.     1.00
+          1.  111.   329.     1.00
+          1.  111.   328.     1.00
+          1.  112.   328.     1.00
+          1.  112.   327.     1.00
+          1.  113.   327.     1.00
+          1.  113.   326.     1.00
+          1.  113.   325.     1.00
+          1.  114.   325.     1.00
+          1.  114.   324.     1.00
+          1.  115.   324.     1.00
+          1.  115.   323.     1.00
+          1.  116.   323.     1.00
+          1.  116.   322.     1.00
+          1.  117.   322.     1.00
+          1.  117.   321.     1.00
+          1.  118.   321.     1.00
+          1.  118.   320.     1.00
+          1.  118.   319.     1.00
+          1.  119.   319.     1.00
+          1.  119.   318.     1.00
+          1.  120.   318.     1.00
+          1.  121.   318.     1.00
+          1.  121.   317.     1.00
+          1.  122.   317.     1.00
+          1.  123.   317.     1.00
+          1.  124.   317.     1.00
+          1.  124.   316.     1.00
+          1.  125.   316.     1.00
+          1.  126.   316.     1.00
+          1.  126.   315.     1.00
+          1.  127.   315.     1.00
+          1.  128.   315.     1.00
+          1.  128.   314.     1.00
+          1.  129.   314.     1.00
+          1.  130.   314.     1.00
+          1.  130.   313.     1.00
+          1.  131.   313.     1.00
+          1.  132.   313.     1.00
+          1.  133.   313.     1.00
+          1.  134.   313.     1.00
+          1.  134.   312.     1.00
+          1.  135.   312.     1.00
+          1.  136.   312.     1.00
+          1.  137.   312.     1.00
+          1.  138.   312.     1.00
+          1.  139.   312.     1.00
+          1.  139.   311.     1.00
+          1.  140.   311.     1.00
+          1.  141.   311.     1.00
+          1.  141.   310.     1.00
+          1.  142.   310.     1.00
+          1.  142.   309.     1.00
+          1.  143.   309.     1.00
+          1.  143.   308.     1.00
+          1.  143.   307.     1.00
+          1.  144.   307.     1.00
+          1.  144.   306.     1.00
+          1.  144.   305.     1.00
+          1.  145.   305.     1.00
+          1.  145.   304.     1.00
+          1.  145.   303.     1.00
+          1.  145.   302.     1.00
+          1.  146.   302.     1.00
+          1.  146.   301.     1.00
+          1.  146.   300.     1.00
+          1.  146.   299.     1.00
+          1.  147.   299.     1.00
+          1.  148.   299.     1.00
+          1.  148.   298.     1.00
+          1.  148.   297.     1.00
+          1.  149.   297.     1.00
+          1.  149.   296.     1.00
+          1.  149.   295.     1.00
+          1.  150.   295.     1.00
+          1.  150.   294.     1.00
+          1.  151.   294.     1.00
+          1.  151.   293.     1.00
+          1.  151.   292.     1.00
+          1.  152.   292.     1.00
+          1.  152.   291.     1.00
+          1.  153.   291.     1.00
+          1.  153.   290.     1.00
+          1.  153.   289.     1.00
+          1.  154.   289.     1.00
+          1.  154.   288.     1.00
+          1.  154.   287.     1.00
+          1.  154.   286.     1.00
+          1.  154.   285.     1.00
+          1.  155.   285.     1.00
+          1.  155.   284.     1.00
+          1.  155.   283.     1.00
+          1.  155.   282.     1.00
+          1.  155.   281.     1.00
+          1.  156.   281.     1.00
+          1.  156.   280.     1.00
+          1.  156.   279.     1.00
+          1.  156.   278.     1.00
+          1.  157.   278.     1.00
+          1.  157.   277.     1.00
+          1.  157.   276.     1.00
+          1.  158.   276.     1.00
+          1.  158.   275.     1.00
+          1.  159.   275.     1.00
+          1.  159.   274.     1.00
+          1.  159.   273.     1.00
+          1.  160.   273.     1.00
+          1.  160.   272.     1.00
+          1.  160.   271.     1.00
+          1.  160.   270.     1.00
+          1.  160.   269.     1.00
+          1.  160.   268.     1.00
+          1.  161.   268.     1.00
+          1.  161.   267.     1.00
+          1.  161.   266.     1.00
+          1.  162.   266.     1.00
+          1.  160.   266.     1.00
+          1.  159.   266.     1.00
+          1.  159.   265.     1.00
+          1.  158.   265.     1.00
+          1.  158.   264.     1.00
+          1.  158.   263.     1.00
+          1.  159.   263.     1.00
+          1.  159.   262.     1.00
+          1.  160.   262.     1.00
+          1.  160.   261.     1.00
+          1.  161.   261.     1.00
+          1.  162.   261.     1.00
+          1.  162.   260.     1.00
+          1.  162.   259.     1.00
+          1.  163.   259.     1.00
+          1.  163.   258.     1.00
+          1.  163.   257.     1.00
+          1.  164.   257.     1.00
+          1.  164.   256.     1.00
+          1.  165.   256.     1.00
+          1.  165.   255.     1.00
+          1.  164.   255.     1.00
+          1.  164.   254.     1.00
+          1.  164.   253.     1.00
+          1.  164.   252.     1.00
+          1.  164.   251.     1.00
+          1.  163.   251.     1.00
+          1.  163.   250.     1.00
+          1.  162.   250.     1.00
+          1.  162.   249.     1.00
+          1.  161.   249.     1.00
+          1.  160.   249.     1.00
+          1.  160.   248.     1.00
+          1.  160.   247.     1.00
+          1.  160.   246.     1.00
+          1.  160.   245.     1.00
+          1.  160.   244.     1.00
+          1.  159.   244.     1.00
+          1.  159.   243.     1.00
+          1.  159.   242.     1.00
+          1.  159.   241.     1.00
+          1.  158.   241.     1.00
+          1.  158.   240.     1.00
+          1.  157.   240.     1.00
+          1.  157.   239.     1.00
+          1.  157.   238.     1.00
+          1.  157.   237.     1.00
+          1.  156.   237.     1.00
+          1.  156.   236.     1.00
+          1.  156.   235.     1.00
+          1.  156.   234.     1.00
+          1.  156.   233.     1.00
+          1.  156.   232.     1.00
+          1.  156.   231.     1.00
+          1.  155.   231.     1.00
+          1.  155.   230.     1.00
+          1.  155.   229.     1.00
+          1.  155.   228.     1.00
+          1.  155.   227.     1.00
+          1.  155.   226.     1.00
+          1.  155.   225.     1.00
+          1.  154.   225.     1.00
+          1.  154.   224.     1.00
+          1.  154.   223.     1.00
+          1.  154.   222.     1.00
+          1.  154.   221.     1.00
+          1.  154.   220.     1.00
+          1.  154.   219.     1.00
+          1.  154.   218.     1.00
+          1.  153.   218.     1.00
+          1.  153.   217.     1.00
+          1.  153.   216.     1.00
+          1.  153.   215.     1.00
+          1.  153.   214.     1.00
+          1.  153.   213.     1.00
+          1.  153.   212.     1.00
+          1.  153.   211.     1.00
+          1.  153.   210.     1.00
+          1.  153.   209.     1.00
+          1.  153.   208.     1.00
+          1.  153.   207.     1.00
+          1.  153.   206.     1.00
+          1.  152.   206.     1.00
+          1.  152.   205.     1.00
+          1.  152.   204.     1.00
+          1.  152.   203.     1.00
+          1.  152.   202.     1.00
+          1.  152.   201.     1.00
+          1.  151.   201.     1.00
+          1.  151.   200.     1.00
+          1.  151.   199.     1.00
+          1.  150.   199.     1.00
+          1.  150.   198.     1.00
+          1.  149.   198.     1.00
+          1.  149.   197.     1.00
+          1.  148.   197.     1.00
+          1.  148.   196.     1.00
+          1.  147.   196.     1.00
+          1.  147.   195.     1.00
+          1.  147.   194.     1.00
+          1.  146.   194.     1.00
+          1.  146.   193.     1.00
+          1.  146.   192.     1.00
+          1.  145.   192.     1.00
+          1.  145.   191.     1.00
+          1.  144.   191.     1.00
+          1.  144.   190.     1.00
+          1.  144.   189.     1.00
+          1.  143.   189.     1.00
+          1.  143.   188.     1.00
+          1.  143.   187.     1.00
+          1.  143.   186.     1.00
+          1.  143.   185.     1.00
+          1.  142.   185.     1.00
+          1.  142.   184.     1.00
+          1.  142.   183.     1.00
+          1.  141.   183.     1.00
+          1.  141.   182.     1.00
+          1.  140.   182.     1.00
+          1.  140.   181.     1.00
+          1.  139.   181.     1.00
+          1.  139.   180.     1.00
+          1.  139.   179.     1.00
+          1.  138.   179.     1.00
+          1.  137.   179.     1.00
+          1.  137.   178.     1.00
+          1.  137.   177.     1.00
+          1.  137.   176.     1.00
+          1.  136.   176.     1.00
+          1.  136.   175.     1.00
+          1.  136.   174.     1.00
+          1.  136.   173.     1.00
+          1.  136.   172.     1.00
+          1.  136.   171.     1.00
+          1.  135.   171.     1.00
+          1.  135.   170.     1.00
+          1.  134.   170.     1.00
+          1.  133.   170.     1.00
+          1.  133.   169.     1.00
+          1.  132.   169.     1.00
+          1.  131.   169.     1.00
+          1.  131.   168.     1.00
+          1.  130.   168.     1.00
+          1.  129.   168.     1.00
+          1.  129.   167.     1.00
+          1.  128.   167.     1.00
+          1.  128.   166.     1.00
+          1.  127.   166.     1.00
+          1.  127.   165.     1.00
+          1.  126.   165.     1.00
+          1.  126.   164.     1.00
+          1.  125.   164.     1.00
+          1.  125.   163.     1.00
+          1.  125.   162.     1.00
+          1.  125.   161.     1.00
+          1.  124.   161.     1.00
+          1.  124.   160.     1.00
+          1.  124.   159.     1.00
+          1.  124.   158.     1.00
+          1.  124.   157.     1.00
+          1.  124.   156.     1.00
+          1.  123.   156.     1.00
+          1.  123.   155.     1.00
+          1.  123.   154.     1.00
+          1.  123.   153.     1.00
+          1.  123.   152.     1.00
+          1.  123.   151.     1.00
+          1.  123.   150.     1.00
+          1.  123.   149.     1.00
+          1.  123.   148.     1.00
+          1.  123.   147.     1.00
+          1.  123.   146.     1.00
+          1.  122.   146.     1.00
+          1.  122.   145.     1.00
+          1.  122.   144.     1.00
+          1.  121.   144.     1.00
+          1.  121.   143.     1.00
+          1.  121.   142.     1.00
+          1.  121.   141.     1.00
+          1.  121.   140.     1.00
+          1.  121.   139.     1.00
+          1.  120.   139.     1.00
+          1.  120.   138.     1.00
+          1.  120.   137.     1.00
+          1.  120.   136.     1.00
+          1.  119.   136.     1.00
+          1.  119.   135.     1.00
+          1.  119.   134.     1.00
+          1.  119.   133.     1.00
+          1.  119.   132.     1.00
+          1.  119.   131.     1.00
+          1.  119.   130.     1.00
+          1.  118.   130.     1.00
+          1.  118.   129.     1.00
+          1.  118.   128.     1.00
+          1.  118.   127.     1.00
+          1.  118.   126.     1.00
+          1.  118.   125.     1.00
+          1.  118.   124.     1.00
+          1.  118.   123.     1.00
+          1.  118.   122.     1.00
+          1.  118.   121.     1.00
+          1.  118.   120.     1.00
+          1.  118.   119.     1.00
+          1.  118.   118.     1.00
+          1.  118.   117.     1.00
+          1.  118.   116.     1.00
+          1.  118.   115.     1.00
+          1.  118.   114.     1.00
+          1.  118.   113.     1.00
+          1.  118.   112.     1.00
+          1.  118.   111.     1.00
+          1.  119.   111.     1.00
+          1.  119.   110.     1.00
+          1.  119.   109.     1.00
+          1.  120.   109.     1.00
+          1.  120.   108.     1.00
+          1.  118.   110.     1.00
+          1.  117.   110.     1.00
+          1.  117.   111.     1.00
+          1.  116.   110.     1.00
+          1.  116.   109.     1.00
+          1.  116.   108.     1.00
+          1.  116.   107.     1.00
+          1.  116.   106.     1.00
+          1.  116.   105.     1.00
+          1.  115.   105.     1.00
+          1.  115.   104.     1.00
+          1.  114.   104.     1.00
+          1.  114.   103.     1.00
+          1.  114.   102.     1.00
+          1.  114.   101.     1.00
+          1.  113.   101.     1.00
+          1.  113.   100.     1.00
+          1.  113.    99.     1.00
+          1.  113.    98.     1.00
+          1.  113.    97.     1.00
+          1.  113.    96.     1.00
+          1.  113.    95.     1.00
+          1.  112.    95.     1.00
+          1.  112.    94.     1.00
+          1.  112.    93.     1.00
+          1.  112.    92.     1.00
+          1.  112.    91.     1.00
+          1.  112.    90.     1.00
+          1.  111.    90.     1.00
+          1.  111.    89.     1.00
+          1.  111.    88.     1.00
+          1.  111.    87.     1.00
+          1.  111.    86.     1.00
+          1.  111.    85.     1.00
+          1.  111.    84.     1.00
+          1.  111.    83.     1.00
+          1.  111.    82.     1.00
+          1.  111.    81.     1.00
+          1.  111.    80.     1.00
+          1.  110.    80.     1.00
+          1.  111.    79.     1.00
+          1.  111.    78.     1.00
+          1.  111.    77.     1.00
+          1.  111.    76.     1.00
+          1.  111.    75.     1.00
+          1.  112.    75.     1.00
+          1.  112.    74.     1.00
+          1.  112.    73.     1.00
+          1.  112.    72.     1.00
+
+   GROUP NUMBER:  44   BOUNDARY TYPE: CHD   NUMBER OF CELLS IN GROUP:    82
+   NUMBER OF FLOW OBSERVATIONS:     1
+
+                                        OBSERVED
+                    REFER.            BOUNDARY FLOW
+       OBSERVATION  STRESS    TIME     GAIN (-) OR              STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     LOSS (+)    STATISTIC     TYPE      SYM.
+   175 no_ch15          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.  112.    72.     1.00
+          1.  112.    71.     1.00
+          1.  112.    70.     1.00
+          1.  113.    70.     1.00
+          1.  113.    69.     1.00
+          1.  113.    68.     1.00
+          1.  113.    67.     1.00
+          1.  114.    67.     1.00
+          1.  114.    66.     1.00
+          1.  114.    65.     1.00
+          1.  114.    64.     1.00
+          1.  115.    64.     1.00
+          1.  115.    63.     1.00
+          1.  115.    62.     1.00
+          1.  115.    61.     1.00
+          1.  115.    60.     1.00
+          1.  115.    59.     1.00
+          1.  115.    58.     1.00
+          1.  115.    57.     1.00
+          1.  115.    56.     1.00
+          1.  115.    55.     1.00
+          1.  115.    54.     1.00
+          1.  115.    53.     1.00
+          1.  115.    52.     1.00
+          1.  116.    52.     1.00
+          1.  116.    51.     1.00
+          1.  116.    50.     1.00
+          1.  116.    49.     1.00
+          1.  116.    48.     1.00
+          1.  116.    47.     1.00
+          1.  116.    46.     1.00
+          1.  116.    45.     1.00
+          1.  116.    44.     1.00
+          1.  116.    43.     1.00
+          1.  116.    42.     1.00
+          1.  116.    41.     1.00
+          1.  116.    40.     1.00
+          1.  117.    40.     1.00
+          1.  117.    39.     1.00
+          1.  117.    38.     1.00
+          1.  117.    37.     1.00
+          1.  117.    36.     1.00
+          1.  117.    35.     1.00
+          1.  117.    34.     1.00
+          1.  117.    33.     1.00
+          1.  117.    32.     1.00
+          1.  118.    32.     1.00
+          1.  118.    31.     1.00
+          1.  118.    30.     1.00
+          1.  118.    29.     1.00
+          1.  118.    28.     1.00
+          1.  119.    28.     1.00
+          1.  119.    27.     1.00
+          1.  119.    26.     1.00
+          1.  119.    25.     1.00
+          1.  118.    25.     1.00
+          1.  118.    24.     1.00
+          1.  118.    23.     1.00
+          1.  117.    23.     1.00
+          1.  117.    22.     1.00
+          1.  117.    21.     1.00
+          1.  117.    20.     1.00
+          1.  117.    19.     1.00
+          1.  116.    19.     1.00
+          1.  116.    18.     1.00
+          1.  116.    17.     1.00
+          1.  116.    16.     1.00
+          1.  116.    15.     1.00
+          1.  116.    14.     1.00
+          1.  115.    14.     1.00
+          1.  115.    13.     1.00
+          1.  115.    12.     1.00
+          1.  115.    11.     1.00
+          1.  115.    10.     1.00
+          1.  115.     9.     1.00
+          1.  115.     8.     1.00
+          1.  115.     7.     1.00
+          1.  114.     7.     1.00
+          1.  114.     6.     1.00
+          1.  113.     6.     1.00
+          1.  113.     5.     1.00
+          1.  112.     5.     1.00
+
+   GROUP NUMBER:  45   BOUNDARY TYPE: CHD   NUMBER OF CELLS IN GROUP:    27
+   NUMBER OF FLOW OBSERVATIONS:     1
+
+                                        OBSERVED
+                    REFER.            BOUNDARY FLOW
+       OBSERVATION  STRESS    TIME     GAIN (-) OR              STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     LOSS (+)    STATISTIC     TYPE      SYM.
+   176 no_ch16          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   36.   207.     1.00
+          1.   36.   208.     1.00
+          1.   36.   209.     1.00
+          1.   36.   210.     1.00
+          1.   36.   211.     1.00
+          1.   37.   211.     1.00
+          1.   37.   212.     1.00
+          1.   37.   213.     1.00
+          1.   37.   214.     1.00
+          1.   37.   215.     1.00
+          1.   37.   216.     1.00
+          1.   38.   216.     1.00
+          1.   38.   217.     1.00
+          1.   38.   218.     1.00
+          1.   38.   219.     1.00
+          1.   38.   220.     1.00
+          1.   38.   221.     1.00
+          1.   38.   222.     1.00
+          1.   39.   222.     1.00
+          1.   39.   223.     1.00
+          1.   39.   224.     1.00
+          1.   39.   225.     1.00
+          1.   39.   226.     1.00
+          1.   39.   227.     1.00
+          1.   39.   228.     1.00
+          1.   39.   229.     1.00
+          1.   40.   229.     1.00
+
+   GROUP NUMBER:  46   BOUNDARY TYPE: CHD   NUMBER OF CELLS IN GROUP:    21
+   NUMBER OF FLOW OBSERVATIONS:     1
+
+                                        OBSERVED
+                    REFER.            BOUNDARY FLOW
+       OBSERVATION  STRESS    TIME     GAIN (-) OR              STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     LOSS (+)    STATISTIC     TYPE      SYM.
+   177 no_ch17          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.    8.    44.     1.00
+          1.    9.    44.     1.00
+          1.    9.    45.     1.00
+          1.   10.    45.     1.00
+          1.   10.    46.     1.00
+          1.   11.    46.     1.00
+          1.   11.    47.     1.00
+          1.   12.    47.     1.00
+          1.   12.    48.     1.00
+          1.   12.    49.     1.00
+          1.   12.    50.     1.00
+          1.   12.    51.     1.00
+          1.   12.    52.     1.00
+          1.   12.    53.     1.00
+          1.   12.    54.     1.00
+          1.   12.    55.     1.00
+          1.   12.    56.     1.00
+          1.   12.    57.     1.00
+          1.   12.    58.     1.00
+          1.   13.    58.     1.00
+          1.   13.    59.     1.00
+
+   GROUP NUMBER:  47   BOUNDARY TYPE: CHD   NUMBER OF CELLS IN GROUP:    34
+   NUMBER OF FLOW OBSERVATIONS:     1
+
+                                        OBSERVED
+                    REFER.            BOUNDARY FLOW
+       OBSERVATION  STRESS    TIME     GAIN (-) OR              STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     LOSS (+)    STATISTIC     TYPE      SYM.
+   178 no_ch18          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   40.   229.     1.00
+          1.   39.   229.     1.00
+          1.   39.   230.     1.00
+          1.   39.   231.     1.00
+          1.   39.   232.     1.00
+          1.   38.   232.     1.00
+          1.   38.   233.     1.00
+          1.   38.   234.     1.00
+          1.   39.   234.     1.00
+          1.   39.   235.     1.00
+          1.   39.   236.     1.00
+          1.   39.   237.     1.00
+          1.   40.   237.     1.00
+          1.   40.   238.     1.00
+          1.   39.   238.     1.00
+          1.   39.   239.     1.00
+          1.   39.   240.     1.00
+          1.   39.   241.     1.00
+          1.   40.   241.     1.00
+          1.   41.   241.     1.00
+          1.   42.   241.     1.00
+          1.   43.   241.     1.00
+          1.   44.   241.     1.00
+          1.   44.   242.     1.00
+          1.   45.   242.     1.00
+          1.   46.   242.     1.00
+          1.   46.   243.     1.00
+          1.   46.   244.     1.00
+          1.   46.   245.     1.00
+          1.   47.   245.     1.00
+          1.   48.   245.     1.00
+          1.   48.   246.     1.00
+          1.   49.   246.     1.00
+          1.   50.   246.     1.00
+
+   GROUP NUMBER:  48   BOUNDARY TYPE: CHD   NUMBER OF CELLS IN GROUP:    31
+   NUMBER OF FLOW OBSERVATIONS:     1
+
+                                        OBSERVED
+                    REFER.            BOUNDARY FLOW
+       OBSERVATION  STRESS    TIME     GAIN (-) OR              STATISTIC   PLOT
+  OBS#    NAME      PERIOD   OFFSET     LOSS (+)    STATISTIC     TYPE      SYM.
+   179 no_ch19          1    0.000       1.000      0.1000E+19  STD. DEV.      1
+
+       LAYER  ROW  COLUMN    FACTOR
+          1.   50.   246.     1.00
+          1.   49.   246.     1.00
+          1.   49.   247.     1.00
+          1.   48.   247.     1.00
+          1.   47.   247.     1.00
+          1.   47.   248.     1.00
+          1.   46.   248.     1.00
+          1.   45.   248.     1.00
+          1.   44.   248.     1.00
+          1.   43.   248.     1.00
+          1.   42.   248.     1.00
+          1.   41.   248.     1.00
+          1.   40.   248.     1.00
+          1.   39.   248.     1.00
+          1.   39.   249.     1.00
+          1.   40.   249.     1.00
+          1.   40.   250.     1.00
+          1.   40.   251.     1.00
+          1.   41.   251.     1.00
+          1.   42.   251.     1.00
+          1.   43.   251.     1.00
+          1.   43.   252.     1.00
+          1.   44.   252.     1.00
+          1.   45.   252.     1.00
+          1.   46.   252.     1.00
+          1.   47.   252.     1.00
+          1.   48.   252.     1.00
+          1.   49.   252.     1.00
+          1.   50.   252.     1.00
+          1.   50.   253.     1.00
+          1.   50.   254.     1.00
+
+
+
+                                    SOLUTION BY THE CONJUGATE-GRADIENT METHOD
+                                   -------------------------------------------
+                    MAXIMUM NUMBER OF CALLS TO PCG ROUTINE =      100
+                        MAXIMUM ITERATIONS PER CALL TO PCG =      100
+                               MATRIX PRECONDITIONING TYPE =        1
+        RELAXATION FACTOR (ONLY USED WITH PRECOND. TYPE 1) =    0.10500E+01
+ PARAMETER OF POLYNOMIAL PRECOND. = 2 (2) OR IS CALCULATED :        0
+                         HEAD CHANGE CRITERION FOR CLOSURE =    0.10000E-01
+                     RESIDUAL CHANGE CRITERION FOR CLOSURE =    0.10000E-01
+            PCG HEAD AND RESIDUAL CHANGE PRINTOUT INTERVAL =      999
+     PRINTING FROM SOLVER IS LIMITED(1) OR SUPPRESSED (>1) =        2
+                                         DAMPING PARAMETER =    0.10000E+01
+
+ WETTING CAPABILITY IS NOT ACTIVE IN ANY LAYER
+
+
+     0 Well parameters
+
+
+     0 Drain parameters
+
+
+     0 Recharge parameters
+
+
+     0 TIME-VARIANT SPECIFIED-HEAD PARAMETERS
+
+
+     0 HFB parameters
+
+ SMALLEST AND LARGEST WEIGHTED RESIDUALS
+
+      SMALLEST WEIGHTED RESIDUALS      |       LARGEST WEIGHTED RESIDUALS
+                WEIGHTED   PERCENT OF  |                 WEIGHTED   PERCENT OF
+ NAME           RESIDUAL    OBJ FUNC   |  NAME           RESIDUAL    OBJ FUNC
+ hed92          -110.        80.82     |  hed90           45.9        13.99
+ hed91          -16.3         1.76     |  hed131          5.63         0.21
+ hed121         -8.95         0.53     |  hed100          5.63         0.21
+ hed87          -8.95         0.53     |  hed95           4.62         0.14
+ hed127         -5.43         0.20     |  hed126          4.62         0.14
+
+ STATISTICS FOR ALL RESIDUALS :
+ AVERAGE WEIGHTED RESIDUAL  :-0.760E+00
+ # RESIDUALS >= 0. :     81
+ # RESIDUALS < 0.  :     96
+ NUMBER OF RUNS  :   43  IN  177 OBSERVATIONS
+
+ INTERPRETING THE CALCULATED RUNS STATISTIC VALUE OF     -6.89    
+ NOTE: THE FOLLOWING APPLIES ONLY IF 
+        # RESIDUALS >= 0 . IS GREATER THAN 10 AND 
+        # RESIDUALS < 0.   IS GREATER THAN 10
+ THE NEGATIVE VALUE MAY INDICATE TOO FEW RUNS:
+    IF THE VALUE IS LESS THAN -1.28, THERE IS LESS THAN A 10 PERCENT
+       CHANCE THE VALUES ARE RANDOM,
+    IF THE VALUE IS LESS THAN -1.645, THERE IS LESS THAN A 5 PERCENT
+       CHANCE THE VALUES ARE RANDOM,
+    IF THE VALUE IS LESS THAN -1.96, THERE IS LESS THAN A 2.5 PERCENT
+       CHANCE THE VALUES ARE RANDOM.
+
+
+ CORRELATION BETWEEN ORDERED WEIGHTED RESIDUALS AND NORMAL ORDER STATISTICS
+ FOR OBSERVATIONS =    0.182    
+
+ --------------------------------------------------------------------------
+ COMMENTS ON THE INTERPRETATION OF THE CORRELATION BETWEEN
+ WEIGHTED RESIDUALS AND NORMAL ORDER STATISTICS:
+
+ The critical value for correlation at the 5% significance level is 0.985
+
+ IF the reported CORRELATION is GREATER than the 5% critical value, ACCEPT
+ the hypothesis that the weighted residuals are INDEPENDENT AND NORMALLY
+ DISTRIBUTED at the 5% significance level.  The probability that this   
+ conclusion is wrong is less than 5%.
+
+ IF the reported correlation IS LESS THAN the 5% critical value REJECT the
+ hypothesis that the weighted residuals are INDEPENDENT AND NORMALLY
+ DISTRIBUTED at the 5% significance level.
+
+ The analysis can also be done using the 10% significance level.
+ The associated critical value is 0.987
+ --------------------------------------------------------------------------
+

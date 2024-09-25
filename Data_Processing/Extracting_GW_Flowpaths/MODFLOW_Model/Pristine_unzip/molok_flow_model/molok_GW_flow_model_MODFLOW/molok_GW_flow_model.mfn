@@ -1,0 +1,28 @@
+# MF2K NAME file
+#
+# Output Files
+GLOBAL        701 "molok_GW_flow_model.glo"
+LIST          702 "molok_GW_flow_model.out"
+DATA(BINARY)  730 "molok_GW_flow_model.hed"
+DATA(BINARY)  740 "molok_GW_flow_model.ccf"
+LMT6          718 "molok_GW_flow_model.lmt"
+#
+# Obs-Sen-Pes Process Input Files
+OBS           750 "molok_GW_flow_model.obs"
+HOB           751 "molok_GW_flow_model.hob"
+DROB          754 "molok_GW_flow_model.drob"
+CHOB          755 "molok_GW_flow_model.chob"
+#
+# Global Input Files
+DIS           719 "molok_GW_flow_model.dis"
+#
+# Flow Process Input Files
+BAS6          703 "molok_GW_flow_model.ba6"
+LPF           704 "molok_GW_flow_model.lpf"
+OC            715 "molok_GW_flow_model.oc"
+RCH           716 "molok_GW_flow_model.rch"
+HFB6          707 "molok_GW_flow_model.hfb"
+WEL           709 "molok_GW_flow_model.wel"
+DRN           710 "molok_GW_flow_model.drn"
+CHD           713 "molok_GW_flow_model.chd"
+PCG           714 "molok_GW_flow_model.pcg"
