@@ -1,0 +1,5 @@
+For some reason my Scripts leaft out 76 Grid cells, with out Flikr IDs.  No idea why this happened but it doesnt matter.  
+
+The real problem was that the Flikr_ID-s island idnetifier had to be Maui, or else the other datasets would not end up matching so I had to change the island identifuer to Maui instead of Molokai.  Some scripts changed around a bit to do this. Otherwuse the failsafe that does a clisest spatial join works fine I think
+
+Here goes... 
