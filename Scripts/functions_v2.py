@@ -21,7 +21,7 @@ seed(5)
 pd.options.mode.chained_assignment = None  # default='warn'
 pd.set_option('display.max_rows', 50)
 
-tempspace = os.path.join(".", "tempspace")
+tempspace = os.path.abspath(os.path.join(".", "tempspace"))
 intermidiate_DataFramesPath = os.path.join(".", 'Outputs/intermidiate_DataFrames')
 
 
@@ -52,7 +52,7 @@ def convert_OSDS_csv_to_shp(csvFilePath):
     # Convert CSV to shapefile of the OSDS points 
     arcpy.management.Delete(os.path.join(tempspace, "OSDS_cleaned.shp"))  # In case the shapefile already exists Arc will not overwright, have to delete
     spatialRef = arcpy.SpatialReference(4326)
-    #csvFilePath = os.path.join(intermidiate_DataFramesPath, "OSDS.csv")
+    csvFilePath = os.path.join(intermidiate_DataFramesPath, "OSDS.csv")
     shpFilePath = os.path.join(tempspace)
     arcpy.MakeXYEventLayer_management(csvFilePath, 'X', 'Y', 'OSDS_cleaned', spatial_reference=spatialRef)
     arcpy.FeatureClassToShapefile_conversion('OSDS_cleaned', shpFilePath)
@@ -253,11 +253,18 @@ def crossplotEm(x, y, row, col, num, xlabel, ylabel, title, c='k'):
 
 def group_by_census_unit(MASTER_df, ID_column, omit_less_than=10):
     # first get a count of OSDS units in each unit    
+       
     countPiv = pd.pivot_table(MASTER_df, index=ID_column, aggfunc = 'count')
     countPiv.reset_index(inplace=True)
     
     # now average ranks over the tracks
-    Unit_Priority_Master = pd.pivot_table(MASTER_df, index=ID_column, aggfunc = 'mean')
+    #####Unit_Priority_Master = pd.pivot_table(MASTER_df, index=ID_column, aggfunc = 'mean')
+    
+    # Only use numeric columns for the mean aggregation
+    numeric_cols = MASTER_df.select_dtypes(include='number').columns
+    Unit_Priority_Master = pd.pivot_table(MASTER_df[numeric_cols.union([ID_column])], index=ID_column, aggfunc='mean')
+    
+    
     Unit_Priority_Master.reset_index(inplace=True)
     Unit_Priority_Master['OSDS_count'] = countPiv['Uid']   # Craete an OSDS count column (any column will do)
     # Unit_Priority_Master['Total_butt_units_count'] = Unit_Priority_Master['OSDS_count']*Unit_Priority_Master['PepPerHos']   # Craete an butt_units count column, meaning total number of people pooping in the block into OSDS
@@ -276,7 +283,8 @@ def group_by_census_unit(MASTER_df, ID_column, omit_less_than=10):
     Score_for_MED = Unit_Priority_Master['Final_Prioity_Score'].quantile([0.5,0.75]).values[0]
 
     # Note if the census track/block has more than %50 if its OSDS units inside a 2017 priority zone
-    Unit_Priority_Master["50pct_In_2017_CP_zone"] = Unit_Priority_Master['In_2017_CP_zone'].apply(lambda x: True if x>0.5 else False)
+    #Unit_Priority_Master["50pct_In_2017_CP_zone"] = Unit_Priority_Master['In_2017_CP_zone'].apply(lambda x: True if x>0.5 else False)
+    # not using this for now 
 
     # Calculate the catergorical Ranking Level, 
     Unit_Priority_Master["Final_Cat_Ranking"]=np.nan

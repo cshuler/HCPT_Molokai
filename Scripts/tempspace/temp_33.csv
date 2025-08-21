@@ -1,3 +1,3 @@
-Name_ID,Track_ID,Final_Prioity_Score,OSDS_count,In_2017_CP_zone,Final_Cat_Ranking,Fin_Rank
- : West Moloka'i: T#295: CPs=560,295,57.238641829798034,560,False,Low,3.0
- : East Moloka'i: T#318: CPs=718,318,115.00562718227027,718,False,High,1.0
+Name_ID,Track_ID,Final_Prioity_Score,OSDS_count,Final_Cat_Ranking,Fin_Rank
+ : West Moloka'i: T#295: CPs=560,295,57.78672849568396,560,Low,3.0
+ : East Moloka'i: T#318: CPs=720,318,99.92473408582555,720,High,1.0
