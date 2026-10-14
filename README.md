@@ -2,7 +2,7 @@
 
 This repository contains the data-processing workflows, scripts, maps, and outputs used to expand the **Hawaiʻi Cesspool Hazard Assessment & Prioritization Tool (HCPT)** to the island of **Molokaʻi**.
 
-> **📄 [Download the Final Project Report](Refs/Molokai_HCPT_Final_Report.pdf)**
+> **📄 [Download the Final Project Report](Refs/Molokai_HCPT_Final_Report_FINAL_reformatted_reduced.pdf)**
 
 The Molokaʻi HCPT evaluates the relative environmental and human-health hazards associated with the island's approximately **1,280 documented cesspools**. The project extends the statewide HCPT framework to Molokaʻi using the same underlying methodology and 15 risk factors developed for the original Hawaiʻi assessment.
 
@@ -31,7 +31,7 @@ Major findings include:
 - **Kaunakakai emerged as the clearest candidate for future sewer expansion** because of its high cesspool density, environmental vulnerability, and proximity to existing wastewater infrastructure.
 - Block groups appear to provide a useful planning scale for Molokaʻi because they capture meaningful differences among the island's distinct cesspool settings.
 
-![Molokaʻi HCPT prioritization results](Refs/HCPT_Molokai_Prioritization.png)
+![Molokaʻi HCPT prioritization results](Refs/HCPT_Molokai_Prioritization.JPG)
 
 ---
 
@@ -58,7 +58,7 @@ These include factors such as:
 
 A particularly important addition for Molokaʻi was the development of **groundwater flowpaths** using a MODFLOW groundwater model and MODPATH particle tracking. These flowpaths link individual cesspools to likely coastal groundwater-discharge areas, allowing coastal ecological and recreational risk factors to be associated with their potential upstream wastewater sources.
 
-![Modeled groundwater flowpaths from Molokaʻi cesspools](Refs/HCPT_Molokai_Flowpaths.png)
+![Modeled groundwater flowpaths from Molokaʻi cesspools](Refs/HCPT_Molokai_Flowpaths.JPG)
 
 ---
 
@@ -122,17 +122,17 @@ The analysis workflow has been designed so that updated cesspool inventories and
 
 ## Related HCPT Work
 
-This project is an extension of the statewide **Hawaiʻi Cesspool Hazard Assessment & Prioritization Tool**, originally developed to support Hawaiʻi's efforts to identify and prioritize cesspools for conversion.
+This project is an extension of the statewide **[Hawaiʻi Cesspool Hazard Assessment & Prioritization Tool](https://seagrant.soest.hawaii.edu/cesspools-tool/)**, originally developed to support Hawaiʻi's efforts to identify and prioritize cesspools for conversion.
 
 The Molokaʻi expansion applies the same general scoring framework while developing the additional island-specific datasets necessary to represent Molokaʻi within the statewide system.
 
 ---
 
-## Project Report
+## Full Resolution Project Report
 
 **Shuler, C. (2024).** *Hawaiʻi Cesspool Hazard Assessment & Prioritization Tool: Report and Appendix – Expansion to the Island of Molokaʻi.*
 
-**[Download the full report](Refs/Molokai_HCPT_Final_Report.pdf)**
+**[Download the full high resolution report (20mb)](Refs/Molokai_HCPT_Final_Report_FINAL_reformatted.pdf)**
 
 ---
 
